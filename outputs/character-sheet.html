@@ -811,27 +811,78 @@ function switchTab(name, btn) {
 document.getElementById('fi').addEventListener('change', function(e) {
   const file = e.target.files[0];
   if (!file) return;
+  if (file.size > 4 * 1024 * 1024) {
+    alert('Файл больше 4 МБ. Выбери JPG, PNG или WEBP поменьше.');
+    e.target.value = '';
+    return;
+  }
+  if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
+    alert('Можно загрузить только JPG, PNG или WEBP.');
+    e.target.value = '';
+    return;
+  }
+  const token = localStorage.getItem('luna_upload_token') || prompt('Пароль для сохранения портрета на сайте:');
+  if (!token) {
+    e.target.value = '';
+    return;
+  }
   const r = new FileReader();
-  r.onload = ev => {
-    document.getElementById('portrait-img').src = ev.target.result;
-    document.getElementById('portrait-img').style.display = 'block';
-    document.getElementById('upload-zone').style.display = 'none';
+  r.onload = async ev => {
+    setPortraitImage(ev.target.result);
     try { localStorage.setItem('luna_portrait', ev.target.result); } catch(e){}
+    try {
+      const response = await fetch('/.netlify/functions/upload-portrait', {
+        method: 'POST',
+        headers: {
+          'content-type': file.type,
+          'x-upload-token': token,
+        },
+        body: file,
+      });
+      if (!response.ok) {
+        let message = 'Не удалось сохранить портрет на сайте.';
+        try {
+          const data = await response.json();
+          if (data.error) message = data.error;
+        } catch(e) {}
+        if (response.status === 401) localStorage.removeItem('luna_upload_token');
+        alert(message);
+        return;
+      }
+      localStorage.setItem('luna_upload_token', token);
+      setPortraitImage('/.netlify/functions/get-portrait?v=' + Date.now());
+    } catch(err) {
+      alert('Портрет показан локально, но облачное сохранение сработает только на Netlify.');
+    } finally {
+      e.target.value = '';
+    }
   };
   r.readAsDataURL(file);
 });
 
 // Восстановить портрет
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', async () => {
   try {
-    const saved = localStorage.getItem('luna_portrait');
-    if (saved) {
-      document.getElementById('portrait-img').src = saved;
-      document.getElementById('portrait-img').style.display = 'block';
-      document.getElementById('upload-zone').style.display = 'none';
+    const response = await fetch('/.netlify/functions/get-portrait', {
+      method: 'HEAD',
+      cache: 'no-store'
+    });
+    if (response.ok) {
+      setPortraitImage('/.netlify/functions/get-portrait?v=' + Date.now());
+      return;
     }
   } catch(e) {}
+  try {
+    const saved = localStorage.getItem('luna_portrait');
+    if (saved) setPortraitImage(saved);
+  } catch(e) {}
 });
+
+function setPortraitImage(src) {
+  document.getElementById('portrait-img').src = src;
+  document.getElementById('portrait-img').style.display = 'block';
+  document.getElementById('upload-zone').style.display = 'none';
+}
 
 // Ripple
 document.querySelectorAll('.scard-anim').forEach(card => {
