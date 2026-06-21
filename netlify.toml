@@ -1,0 +1,7 @@
+[build]
+  publish = "outputs"
+
+[[redirects]]
+  from = "/"
+  to = "/character-sheet.html"
+  status = 200
