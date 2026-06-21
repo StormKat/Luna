@@ -167,6 +167,139 @@ body {
 .portrait-wrap:hover .portrait-overlay { opacity:1; }
 .portrait-upload-btn { font-family:'Metamorphous',serif; font-size:9px; color:#f8e8e8; background:rgba(183,53,53,0.7); border:1px solid #b73535; border-radius:4px; padding:3px 8px; cursor:pointer; width:100%; text-align:center; transition:background 0.2s; }
 .portrait-upload-btn:hover { background:rgba(183,53,53,0.9); }
+.netlify-modal {
+  align-items: center;
+  backdrop-filter: blur(4px);
+  background: rgba(0,0,0,0.74);
+  display: none;
+  inset: 0;
+  justify-content: center;
+  padding: 18px;
+  position: fixed;
+  z-index: 1000;
+}
+.netlify-modal.open { display: flex; }
+.netlify-modal-box {
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(183,53,53,0.16), transparent 48%),
+    #16090c;
+  border: 1px solid #b73535;
+  border-radius: 10px;
+  box-shadow: 0 22px 68px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,107,95,0.13);
+  max-width: 420px;
+  padding: 24px 28px;
+  width: min(100%, 420px);
+}
+.modal-title {
+  color: #f4d7d7;
+  font-family: 'Metamorphous', serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.modal-sub {
+  color: #c48b8b;
+  font-size: 11px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+.modal-sub span { color: #ff6b5f; }
+.upload-password {
+  background: rgba(183,53,53,0.06);
+  border: 1px solid #542026;
+  border-radius: 6px;
+  color: #f8e8e8;
+  font-family: 'Metamorphous', serif;
+  font-size: 12px;
+  margin-bottom: 14px;
+  outline: none;
+  padding: 10px 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+.upload-password:focus {
+  border-color: #b73535;
+  box-shadow: 0 0 0 2px rgba(183,53,53,0.16);
+}
+.upload-password::placeholder { color: #70484d; }
+.dropzone {
+  background: rgba(183,53,53,0.045);
+  border: 2px dashed #542026;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 14px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.2s;
+}
+.dropzone:hover,
+.dropzone.drag-over {
+  background: rgba(183,53,53,0.11);
+  border-color: #b73535;
+}
+.dropzone-icon { color: #ff6b5f; font-size: 32px; margin-bottom: 8px; opacity: 0.74; }
+.dropzone-text { color: #f4d7d7; font-size: 12px; }
+.dropzone-hint { color: #70484d; font-size: 10px; margin-top: 4px; }
+.modal-preview {
+  border: 1px solid #542026;
+  border-radius: 6px;
+  display: none;
+  height: 170px;
+  margin-bottom: 14px;
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+}
+.modal-preview.show { display: block; }
+.modal-actions { display: flex; gap: 8px; }
+.modal-btn {
+  border: 1px solid;
+  border-radius: 6px;
+  cursor: pointer;
+  flex: 1;
+  font-family: 'Metamorphous', serif;
+  font-size: 11px;
+  padding: 9px;
+  text-align: center;
+  transition: all 0.2s;
+}
+.modal-btn-primary {
+  background: #b73535;
+  border-color: #ff6b5f;
+  color: #fff;
+}
+.modal-btn-primary:hover { background: #ff4f45; }
+.modal-btn-primary:disabled { cursor: default; opacity: 0.42; }
+.modal-btn-cancel {
+  background: transparent;
+  border-color: #542026;
+  color: #c48b8b;
+}
+.modal-btn-cancel:hover {
+  border-color: #b73535;
+  color: #f8e8e8;
+}
+.netlify-badge {
+  align-items: center;
+  background: rgba(97,35,39,0.14);
+  border: 1px solid rgba(255,107,95,0.2);
+  border-radius: 5px;
+  color: #ff9286;
+  display: flex;
+  font-size: 10px;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 8px 12px;
+}
+.upload-status {
+  color: #70484d;
+  font-size: 11px;
+  margin-top: 10px;
+  min-height: 16px;
+  text-align: center;
+}
+.upload-status.success { color: #ff9286; }
+.upload-status.error { color: #ffaaa0; }
 
 textarea { background:rgba(183,53,53,0.07); border:0.5px solid #542026; border-radius:3px; color:#f8e8e8; font-family:'Metamorphous',serif; font-size:9px; padding:6px; resize:none; outline:none; line-height:1.5; width:100%; height:58px; }
 textarea::placeholder { color:#70484d; }
@@ -452,13 +585,12 @@ body::after {
 <!-- ШАПКА -->
 <div style="max-width:980px;margin:0 auto;padding:16px 16px 0;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
   <div style="font-family:Metamorphous,serif;font-size:13px;color:#70484d;letter-spacing:2px;text-transform:uppercase;">D&amp;D · <span style="color:#b73535">Лист персонажа</span></div>
-  <button id="upload-btn-top" onclick="document.getElementById('fi').click()"
+  <button id="upload-btn-top" onclick="openPortraitModal()"
     style="background:#b73535;color:#fff;border:1px solid #ff6b5f;border-radius:4px;padding:7px 14px;font-size:11px;cursor:pointer;font-family:Metamorphous,serif;transition:background 0.2s;"
     onmouseover="this.style.background='#ff6b5f'" onmouseout="this.style.background='#b73535'">
     📷 Портрет
   </button>
 </div>
-<input type="file" id="fi" accept="image/*" style="display:none">
 
 <!-- ВКЛАДКИ -->
 <div style="max-width:980px;margin:0 auto 12px;padding:0 16px;">
@@ -477,7 +609,7 @@ body::after {
 
 <!-- БАННЕР -->
 <div style="height:260px;position:relative;overflow:hidden;">
-  <div id="upload-zone" onclick="document.getElementById('fi').click()" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;background:linear-gradient(135deg,#090608 0%,#1d0b10 40%,#21080e 70%,#090608 100%);">
+  <div id="upload-zone" onclick="openPortraitModal()" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;background:linear-gradient(135deg,#090608 0%,#1d0b10 40%,#21080e 70%,#090608 100%);">
     <div style="font-size:48px;opacity:0.15">⚡</div>
     <div style="font-size:11px;color:#70484d;letter-spacing:2px;font-family:Metamorphous,serif;">НАЖМИ ЧТОБЫ ЗАГРУЗИТЬ ПОРТРЕТ</div>
   </div>
@@ -486,7 +618,7 @@ body::after {
   <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,transparent 25%,rgba(10,12,16,0.5) 65%,#16090c 100%);"></div>
   <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(10,12,16,0.4) 0%,transparent 30%,transparent 70%,rgba(10,12,16,0.4) 100%);"></div>
   <!-- Кнопка -->
-  <div class="portrait-wrap" style="position:absolute;inset:0;" onclick="document.getElementById('fi').click()">
+  <div class="portrait-wrap" style="position:absolute;inset:0;" onclick="openPortraitModal()">
     <div class="portrait-overlay">
       <div class="portrait-upload-btn">📷 Изменить</div>
     </div>
@@ -971,6 +1103,43 @@ body::after {
 
 </div><!-- END site-wrap -->
 
+<!-- ══ МОДАЛКА ЗАГРУЗКИ ПОРТРЕТА ══ -->
+<div class="netlify-modal" id="portraitModal">
+  <div class="netlify-modal-box">
+    <div class="modal-title">Портрет персонажа</div>
+    <div class="modal-sub">
+      Загрузи изображение — оно применится к листу.<br>
+      <span>На Netlify портрет сохранится в постоянном хранилище Blobs.</span>
+    </div>
+
+    <input class="upload-password" id="portrait-password" type="password"
+      autocomplete="current-password" placeholder="Пароль для изменения портрета">
+
+    <div class="dropzone" id="dropzone" onclick="document.getElementById('fi-modal').click()"
+         ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+      <div class="dropzone-icon">◈</div>
+      <div class="dropzone-text">Нажми или перетащи файл сюда</div>
+      <div class="dropzone-hint">PNG, JPG, WEBP · до 4 MB</div>
+    </div>
+    <input type="file" id="fi-modal" accept="image/*" style="display:none" onchange="handleFileSelect(this.files[0])">
+
+    <img id="modal-preview" class="modal-preview" alt="Превью портрета">
+
+    <div class="modal-actions">
+      <button class="modal-btn modal-btn-cancel" onclick="closePortraitModal()">Отмена</button>
+      <button class="modal-btn modal-btn-primary" id="modal-apply-btn" onclick="applyPortrait()" disabled>
+        Применить
+      </button>
+    </div>
+
+    <div class="netlify-badge">
+      <span>⬡</span>
+      <span>Новый портрет заменит предыдущий и появится на всех устройствах.</span>
+    </div>
+    <div class="upload-status" id="upload-status"></div>
+  </div>
+</div>
+
 <script>
 // Вкладки
 function switchTab(name, btn) {
@@ -991,56 +1160,124 @@ function switchTab(name, btn) {
 }
 
 // Портрет
-document.getElementById('fi').addEventListener('change', function(e) {
-  const file = e.target.files[0];
+let selectedPortraitFile = null;
+
+function openPortraitModal() {
+  const modal = document.getElementById('portraitModal');
+  const password = document.getElementById('portrait-password');
+  const savedToken = localStorage.getItem('luna_upload_token');
+  if (savedToken && password && !password.value) password.value = savedToken;
+  modal.classList.add('open');
+}
+
+function closePortraitModal() {
+  document.getElementById('portraitModal').classList.remove('open');
+  selectedPortraitFile = null;
+  document.getElementById('fi-modal').value = '';
+  document.getElementById('modal-preview').classList.remove('show');
+  document.getElementById('modal-preview').removeAttribute('src');
+  document.getElementById('dropzone').style.display = '';
+  document.getElementById('modal-apply-btn').disabled = true;
+  setPortraitStatus('', '');
+}
+
+function handleFileSelect(file) {
   if (!file) return;
-  if (file.size > 4 * 1024 * 1024) {
-    alert('Файл больше 4 МБ. Выбери JPG, PNG или WEBP поменьше.');
-    e.target.value = '';
-    return;
-  }
   if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
-    alert('Можно загрузить только JPG, PNG или WEBP.');
-    e.target.value = '';
+    setPortraitStatus('Разрешены только JPG, PNG и WEBP', 'error');
     return;
   }
-  const token = localStorage.getItem('luna_upload_token') || prompt('Пароль для сохранения портрета на сайте:');
-  if (!token) {
-    e.target.value = '';
+  if (file.size > 4 * 1024 * 1024) {
+    setPortraitStatus('Файл слишком большой (макс. 4 МБ)', 'error');
     return;
   }
-  const r = new FileReader();
-  r.onload = async ev => {
-    setPortraitImage(ev.target.result);
-    try { localStorage.setItem('luna_portrait', ev.target.result); } catch(e){}
-    try {
-      const response = await fetch('/.netlify/functions/upload-portrait', {
-        method: 'POST',
-        headers: {
-          'content-type': file.type,
-          'x-upload-token': token,
-        },
-        body: file,
-      });
-      if (!response.ok) {
-        let message = 'Не удалось сохранить портрет на сайте.';
-        try {
-          const data = await response.json();
-          if (data.error) message = data.error;
-        } catch(e) {}
-        if (response.status === 401) localStorage.removeItem('luna_upload_token');
-        alert(message);
-        return;
-      }
-      localStorage.setItem('luna_upload_token', token);
-      setPortraitImage('/.netlify/functions/get-portrait?v=' + Date.now());
-    } catch(err) {
-      alert('Портрет показан локально, но облачное сохранение сработает только на Netlify.');
-    } finally {
-      e.target.value = '';
-    }
+  selectedPortraitFile = file;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    const preview = document.getElementById('modal-preview');
+    preview.src = ev.target.result;
+    preview.classList.add('show');
+    document.getElementById('dropzone').style.display = 'none';
+    document.getElementById('modal-apply-btn').disabled = false;
+    setPortraitStatus('', '');
   };
-  r.readAsDataURL(file);
+  reader.readAsDataURL(file);
+}
+
+async function applyPortrait() {
+  if (!selectedPortraitFile) return;
+  const passwordInput = document.getElementById('portrait-password');
+  const password = passwordInput.value;
+  if (!password) {
+    setPortraitStatus('Введи пароль для изменения портрета', 'error');
+    passwordInput.focus();
+    return;
+  }
+
+  const applyButton = document.getElementById('modal-apply-btn');
+  applyButton.disabled = true;
+  setPortraitStatus('Загружаю портрет...', '');
+
+  const reader = new FileReader();
+  reader.onload = event => {
+    try { localStorage.setItem('luna_portrait', event.target.result); } catch(e) {}
+    setPortraitImage(event.target.result);
+  };
+  reader.readAsDataURL(selectedPortraitFile);
+
+  try {
+    const response = await fetch('/.netlify/functions/upload-portrait', {
+      method: 'POST',
+      headers: {
+        'content-type': selectedPortraitFile.type,
+        'x-upload-token': password,
+      },
+      body: selectedPortraitFile,
+    });
+
+    let result = {};
+    try { result = await response.json(); } catch(e) {}
+
+    if (!response.ok) {
+      if (response.status === 401) localStorage.removeItem('luna_upload_token');
+      throw new Error(response.status === 401 ? 'Неверный пароль' : (result.error || 'Не удалось сохранить портрет'));
+    }
+
+    localStorage.setItem('luna_upload_token', password);
+    setPortraitImage('/.netlify/functions/get-portrait?v=' + Date.now());
+    setPortraitStatus('Портрет сохранён и доступен на всех устройствах', 'success');
+    setTimeout(closePortraitModal, 1200);
+  } catch(error) {
+    setPortraitStatus(error.message || 'Ошибка загрузки портрета', 'error');
+    applyButton.disabled = false;
+  }
+}
+
+function setPortraitStatus(message, state) {
+  const status = document.getElementById('upload-status');
+  if (!status) return;
+  status.textContent = message;
+  status.className = 'upload-status ' + state;
+}
+
+function handleDragOver(event) {
+  event.preventDefault();
+  document.getElementById('dropzone').classList.add('drag-over');
+}
+
+function handleDragLeave(event) {
+  event.preventDefault();
+  document.getElementById('dropzone').classList.remove('drag-over');
+}
+
+function handleDrop(event) {
+  event.preventDefault();
+  document.getElementById('dropzone').classList.remove('drag-over');
+  handleFileSelect(event.dataTransfer.files[0]);
+}
+
+document.getElementById('portraitModal').addEventListener('click', event => {
+  if (event.target === event.currentTarget) closePortraitModal();
 });
 
 // Восстановить портрет
