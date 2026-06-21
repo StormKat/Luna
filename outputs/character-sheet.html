@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Луна — лист персонажа D&amp;D</title>
 <meta name="description" content="Интерактивный лист персонажа Луна для Dungeons & Dragons.">
-<meta name="theme-color" content="#0a0c10">
+<meta name="theme-color" content="#090608">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
@@ -14,28 +14,28 @@ tailwind.config = {
       fontFamily: { meta: ['Metamorphous', 'serif'] },
       colors: {
         storm: {
-          outer:   '#0a0c10',
-          page:    '#10121a',
-          header:  '#141822',
-          bar:     '#0c0e16',
-          accent:  '#5a7fc8',
-          bright:  '#8ab0f0',
-          gold:    '#e8c040',
-          silver:  '#c0ccd8',
-          text:    '#d8e8f8',
-          muted:   '#7890a8',
-          faint:   '#405060',
-          border:  '#283050',
-          card:    'rgba(90,127,200,0.07)',
-          card2:   'rgba(90,127,200,0.13)',
-          new:     '#3a7060',
-          newtext: '#60d0b0',
-          warn:    '#8b3020',
-          warntext:'#e09080',
-          good:    '#2a6040',
-          goodtext:'#60c090',
-          thunder: '#c8a020',
-          purple:  '#7040a0',
+          outer:   '#090608',
+          page:    '#16090c',
+          header:  '#1d0b10',
+          bar:     '#100608',
+          accent:  '#b73535',
+          bright:  '#ff6b5f',
+          gold:    '#ff4f45',
+          silver:  '#f4d7d7',
+          text:    '#f8e8e8',
+          muted:   '#c48b8b',
+          faint:   '#70484d',
+          border:  '#542026',
+          card:    'rgba(183,53,53,0.07)',
+          card2:   'rgba(183,53,53,0.13)',
+          new:     '#733028',
+          newtext: '#ff8c7d',
+          warn:    '#7e241f',
+          warntext:'#ffaaa0',
+          good:    '#612327',
+          goodtext:'#ff9286',
+          thunder: '#d63a32',
+          purple:  '#6e1620',
         }
       }
     }
@@ -44,27 +44,27 @@ tailwind.config = {
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
 <style>
-body { font-family: 'Metamorphous', serif; color: #d8e8f8; }
+body { font-family: 'Metamorphous', serif; color: #f8e8e8; }
 body {
   background:
-    radial-gradient(ellipse at 20% 20%, rgba(90,127,200,0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(200,160,32,0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 50%, rgba(112,64,160,0.05) 0%, transparent 60%),
-    #0a0c10;
+    radial-gradient(ellipse at 20% 20%, rgba(183,53,53,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(214,58,50,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(110,22,32,0.05) 0%, transparent 60%),
+    #090608;
   min-height: 100vh;
 }
 .page {
   width: 100%;
-  background: #10121a;
+  background: #16090c;
   background-image:
-    repeating-linear-gradient(105deg, transparent 0px, transparent 22px, rgba(90,127,200,0.03) 22px, rgba(90,127,200,0.03) 23px),
-    repeating-linear-gradient(75deg, transparent 0px, transparent 32px, rgba(200,160,32,0.02) 32px, rgba(200,160,32,0.02) 33px);
-  border: 1px solid #283050;
-  border-left: 3px solid #5a7fc8;
+    repeating-linear-gradient(105deg, transparent 0px, transparent 22px, rgba(183,53,53,0.03) 22px, rgba(183,53,53,0.03) 23px),
+    repeating-linear-gradient(75deg, transparent 0px, transparent 32px, rgba(214,58,50,0.02) 32px, rgba(214,58,50,0.02) 33px);
+  border: 1px solid #542026;
+  border-left: 3px solid #b73535;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 12px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 60px rgba(90,127,200,0.08);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 60px rgba(183,53,53,0.08);
 }
 .page::before {
   content:''; position:absolute; top:0; left:0; width:100%; height:100%;
@@ -74,36 +74,36 @@ body {
 /* Молния-декор */
 .lightning-bar {
   height: 2px;
-  background: linear-gradient(90deg, transparent 0%, #5a7fc8 20%, #e8c040 50%, #5a7fc8 80%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, #b73535 20%, #ff4f45 50%, #b73535 80%, transparent 100%);
   animation: lightning-pulse 3s ease-in-out infinite;
 }
 @keyframes lightning-pulse {
   0%,100% { opacity: 0.4; }
-  50%      { opacity: 1; box-shadow: 0 0 8px rgba(232,192,64,0.6); }
+  50%      { opacity: 1; box-shadow: 0 0 8px rgba(255,79,69,0.6); }
 }
 @keyframes thunder-glow {
-  0%,100% { border-color: #283050; box-shadow: none; }
-  40%     { border-color: #e8c040; box-shadow: 0 0 12px rgba(232,192,64,0.4), inset 0 0 8px rgba(232,192,64,0.05); }
-  60%     { border-color: #5a7fc8; box-shadow: 0 0 10px rgba(90,127,200,0.5); }
+  0%,100% { border-color: #542026; box-shadow: none; }
+  40%     { border-color: #ff4f45; box-shadow: 0 0 12px rgba(255,79,69,0.4), inset 0 0 8px rgba(255,79,69,0.05); }
+  60%     { border-color: #b73535; box-shadow: 0 0 10px rgba(183,53,53,0.5); }
 }
 @keyframes storm-border {
-  0%,100% { border-color: #283050; }
-  33%     { border-color: #5a7fc8; box-shadow: 0 0 8px rgba(90,127,200,0.4); }
-  66%     { border-color: #7040a0; box-shadow: 0 0 10px rgba(112,64,160,0.4); }
+  0%,100% { border-color: #542026; }
+  33%     { border-color: #b73535; box-shadow: 0 0 8px rgba(183,53,53,0.4); }
+  66%     { border-color: #6e1620; box-shadow: 0 0 10px rgba(110,22,32,0.4); }
 }
 @keyframes cleric-border {
-  0%,100% { border-color: #3a7060; box-shadow: 0 0 5px rgba(58,112,96,0.3); }
-  50%     { border-color: #60d0b0; box-shadow: 0 0 14px rgba(96,208,176,0.5); }
+  0%,100% { border-color: #733028; box-shadow: 0 0 5px rgba(115,48,40,0.3); }
+  50%     { border-color: #ff8c7d; box-shadow: 0 0 14px rgba(255,140,125,0.5); }
 }
 @keyframes goldshine {
   0%   { background-position: 0% center; }
   100% { background-position: 200% center; }
 }
 
-.dot { width:8px; height:8px; border-radius:50%; border:0.5px solid #283050; flex-shrink:0; background:transparent; }
-.dot.p { background:#7890a8; border-color:#c0ccd8; }
-.dot.e { background:#5a7fc8; border-color:#8ab0f0; }
-.atk-row:nth-child(even) td { background: rgba(90,127,200,0.05); }
+.dot { width:8px; height:8px; border-radius:50%; border:0.5px solid #542026; flex-shrink:0; background:transparent; }
+.dot.p { background:#c48b8b; border-color:#f4d7d7; }
+.dot.e { background:#b73535; border-color:#ff6b5f; }
+.atk-row:nth-child(even) td { background: rgba(183,53,53,0.05); }
 
 /* ТУЛТИПЫ */
 .tip { position:relative; cursor:help; }
@@ -112,28 +112,28 @@ body {
   bottom:calc(100% + 8px); left:50%;
   transform:translateX(-50%) translateY(4px);
   width:210px; background:#0a0c18;
-  border:1px solid #5a7fc8; border-radius:6px;
+  border:1px solid #b73535; border-radius:6px;
   padding:8px 10px; font-family:'Metamorphous',serif;
-  font-size:9px; color:#d8e8f8; line-height:1.6;
-  box-shadow:0 4px 20px rgba(90,127,200,0.4);
+  font-size:9px; color:#f8e8e8; line-height:1.6;
+  box-shadow:0 4px 20px rgba(183,53,53,0.4);
   pointer-events:none; opacity:0;
   transition:opacity 0.2s ease, transform 0.2s ease;
 }
 .tip-box::after {
   content:''; position:absolute; top:100%; left:50%;
   transform:translateX(-50%);
-  border:5px solid transparent; border-top-color:#5a7fc8;
+  border:5px solid transparent; border-top-color:#b73535;
 }
-.tip-title { font-size:10px; color:#8ab0f0; border-bottom:1px solid #283050; padding-bottom:4px; margin-bottom:5px; display:block; }
-.tip-good { color:#60c090; }
-.tip-warn { color:#e09080; }
+.tip-title { font-size:10px; color:#ff6b5f; border-bottom:1px solid #542026; padding-bottom:4px; margin-bottom:5px; display:block; }
+.tip-good { color:#ff9286; }
+.tip-warn { color:#ffaaa0; }
 .tip:hover .tip-box { display:block; opacity:1; transform:translateX(-50%) translateY(0); }
 .tip-left .tip-box { left:0; transform:translateX(0) translateY(4px); }
 .tip-left .tip-box::after { left:20px; }
 .tip-left:hover .tip-box { transform:translateX(0) translateY(0); }
 
-.slot { width:26px; height:26px; border-radius:4px; border:1.5px solid #5a7fc8; display:flex; align-items:center; justify-content:center; font-size:10px; color:#c0ccd8; background:rgba(90,127,200,0.1); }
-.slot-new { border-color:#e8c040 !important; background:rgba(232,192,64,0.1) !important; color:#e8c040 !important; }
+.slot { width:26px; height:26px; border-radius:4px; border:1.5px solid #b73535; display:flex; align-items:center; justify-content:center; font-size:10px; color:#f4d7d7; background:rgba(183,53,53,0.1); }
+.slot-new { border-color:#ff4f45 !important; background:rgba(255,79,69,0.1) !important; color:#ff4f45 !important; }
 
 /* ШПАРГАЛКА КАРТОЧКИ */
 .scard-anim {
@@ -143,11 +143,11 @@ body {
 }
 .scard-anim:hover {
   transform:scale(1.045); z-index:50;
-  box-shadow:0 8px 32px rgba(90,127,200,0.45), 0 0 0 1px #5a7fc8;
+  box-shadow:0 8px 32px rgba(183,53,53,0.45), 0 0 0 1px #b73535;
 }
 .scard-anim::before {
   content:''; position:absolute; inset:0;
-  background:linear-gradient(135deg, rgba(90,127,200,0) 0%, rgba(232,192,64,0.08) 40%, rgba(90,127,200,0) 80%);
+  background:linear-gradient(135deg, rgba(183,53,53,0) 0%, rgba(255,79,69,0.08) 40%, rgba(183,53,53,0) 80%);
   background-size:300% 300%; animation:card-fill 5s ease infinite;
   pointer-events:none; border-radius:inherit; z-index:0;
 }
@@ -157,21 +157,84 @@ body {
   50% { background-position:100% 50%; }
   100%{ background-position:0% 50%; }
 }
-.ripple { position:absolute; border-radius:50%; background:rgba(90,127,200,0.3); transform:scale(0); animation:ripple-out 0.6s linear; pointer-events:none; z-index:99; }
+.ripple { position:absolute; border-radius:50%; background:rgba(183,53,53,0.3); transform:scale(0); animation:ripple-out 0.6s linear; pointer-events:none; z-index:99; }
 @keyframes ripple-out { to { transform:scale(4); opacity:0; } }
 
-.sp-point { width:20px; height:20px; border-radius:50%; border:1.5px solid #5a7fc8; display:flex; align-items:center; justify-content:center; font-size:9px; color:#8ab0f0; background:rgba(90,127,200,0.12); }
+.sp-point { width:20px; height:20px; border-radius:50%; border:1.5px solid #b73535; display:flex; align-items:center; justify-content:center; font-size:9px; color:#ff6b5f; background:rgba(183,53,53,0.12); }
 
 /* Баннер */
 .portrait-overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(10,12,16,0.85)); padding:20px 6px 6px; display:flex; flex-direction:column; align-items:center; gap:4px; opacity:0; transition:opacity 0.2s; }
 .portrait-wrap:hover .portrait-overlay { opacity:1; }
-.portrait-upload-btn { font-family:'Metamorphous',serif; font-size:9px; color:#d8e8f8; background:rgba(90,127,200,0.7); border:1px solid #5a7fc8; border-radius:4px; padding:3px 8px; cursor:pointer; width:100%; text-align:center; transition:background 0.2s; }
-.portrait-upload-btn:hover { background:rgba(90,127,200,0.9); }
+.portrait-upload-btn { font-family:'Metamorphous',serif; font-size:9px; color:#f8e8e8; background:rgba(183,53,53,0.7); border:1px solid #b73535; border-radius:4px; padding:3px 8px; cursor:pointer; width:100%; text-align:center; transition:background 0.2s; }
+.portrait-upload-btn:hover { background:rgba(183,53,53,0.9); }
 
-textarea { background:rgba(90,127,200,0.07); border:0.5px solid #283050; border-radius:3px; color:#d8e8f8; font-family:'Metamorphous',serif; font-size:9px; padding:6px; resize:none; outline:none; line-height:1.5; width:100%; height:58px; }
-textarea::placeholder { color:#405060; }
+textarea { background:rgba(183,53,53,0.07); border:0.5px solid #542026; border-radius:3px; color:#f8e8e8; font-family:'Metamorphous',serif; font-size:9px; padding:6px; resize:none; outline:none; line-height:1.5; width:100%; height:58px; }
+textarea::placeholder { color:#70484d; }
+
+/* Red drow pass inspired by darkfrizza.netlify.app */
+body {
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at 18% 20%, rgba(183,53,53,0.14) 0%, transparent 48%),
+    radial-gradient(ellipse at 78% 68%, rgba(126,36,31,0.15) 0%, transparent 52%),
+    radial-gradient(ellipse at 48% 45%, rgba(110,22,32,0.14) 0%, transparent 58%),
+    linear-gradient(180deg, #090608 0%, #110609 54%, #070405 100%) !important;
+}
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: -12%;
+  z-index: -1;
+  pointer-events: none;
+}
+body::before {
+  background:
+    repeating-linear-gradient(105deg, transparent 0 28px, rgba(255,107,95,0.035) 28px 29px),
+    repeating-linear-gradient(18deg, transparent 0 42px, rgba(183,53,53,0.025) 42px 43px);
+  opacity: 0.58;
+}
+body::after {
+  background:
+    radial-gradient(ellipse at 20% 35%, rgba(255,79,69,0.11), transparent 36%),
+    radial-gradient(ellipse at 80% 20%, rgba(183,53,53,0.10), transparent 34%),
+    radial-gradient(ellipse at 60% 90%, rgba(126,36,31,0.16), transparent 42%);
+  filter: blur(18px);
+  opacity: 0.78;
+}
+.page {
+  background:
+    linear-gradient(180deg, rgba(35,10,14,0.94), rgba(18,6,9,0.98)),
+    #16090c !important;
+  border-color: rgba(255,107,95,0.32) !important;
+  border-left-color: #b73535 !important;
+  box-shadow:
+    0 16px 48px rgba(0,0,0,0.58),
+    0 0 56px rgba(183,53,53,0.15),
+    inset 0 1px 0 rgba(255,214,214,0.035) !important;
+}
+.page::before {
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.01) 0px, transparent 1px, transparent 3px),
+    radial-gradient(ellipse at 12% 16%, rgba(255,79,69,0.05), transparent 34%) !important;
+}
+.lightning-bar {
+  background: linear-gradient(90deg, transparent 0%, #7e241f 12%, #ff4f45 50%, #7e241f 88%, transparent 100%);
+}
+.tab-btn {
+  text-shadow: 0 0 12px rgba(255,107,95,0.18);
+}
+.tab-btn.active,
+.tab-btn:hover {
+  box-shadow: inset 0 1px 0 rgba(255,214,214,0.06), 0 -6px 20px rgba(183,53,53,0.10);
+}
+.scard-anim:hover {
+  box-shadow: 0 8px 32px rgba(183,53,53,0.36), 0 0 0 1px #b73535;
+}
 @media print {
-  body { background:#0a0c10; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body { background:#090608; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   .page { border:none; margin-bottom:0; page-break-after:always; }
   .page:last-child { page-break-after:avoid; }
   .portrait-overlay, #upload-btn-top { display:none; }
@@ -202,7 +265,7 @@ textarea::placeholder { color:#405060; }
   }
   .page {
     border-radius:6px;
-    box-shadow:0 6px 28px rgba(0,0,0,0.45), 0 0 36px rgba(90,127,200,0.08);
+    box-shadow:0 6px 28px rgba(0,0,0,0.45), 0 0 36px rgba(183,53,53,0.08);
   }
   .page > div[style*="height:260px"] {
     height:430px !important;
@@ -235,9 +298,9 @@ textarea::placeholder { color:#405060; }
   [style*="grid-template-columns:1fr 1fr"] {
     grid-template-columns:1fr !important;
   }
-  [style*="border-right:1px solid #283050"] {
+  [style*="border-right:1px solid #542026"] {
     border-right:0 !important;
-    border-bottom:1px solid #283050 !important;
+    border-bottom:1px solid #542026 !important;
   }
   .scard-anim:hover {
     transform:none;
@@ -255,10 +318,10 @@ textarea::placeholder { color:#405060; }
 
 <!-- ШАПКА -->
 <div style="max-width:980px;margin:0 auto;padding:16px 16px 0;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-  <div style="font-family:Metamorphous,serif;font-size:13px;color:#405060;letter-spacing:2px;text-transform:uppercase;">D&amp;D · <span style="color:#5a7fc8">Лист персонажа</span></div>
+  <div style="font-family:Metamorphous,serif;font-size:13px;color:#70484d;letter-spacing:2px;text-transform:uppercase;">D&amp;D · <span style="color:#b73535">Лист персонажа</span></div>
   <button id="upload-btn-top" onclick="document.getElementById('fi').click()"
-    style="background:#5a7fc8;color:#fff;border:1px solid #8ab0f0;border-radius:4px;padding:7px 14px;font-size:11px;cursor:pointer;font-family:Metamorphous,serif;transition:background 0.2s;"
-    onmouseover="this.style.background='#8ab0f0'" onmouseout="this.style.background='#5a7fc8'">
+    style="background:#b73535;color:#fff;border:1px solid #ff6b5f;border-radius:4px;padding:7px 14px;font-size:11px;cursor:pointer;font-family:Metamorphous,serif;transition:background 0.2s;"
+    onmouseover="this.style.background='#ff6b5f'" onmouseout="this.style.background='#b73535'">
     📷 Портрет
   </button>
 </div>
@@ -266,10 +329,10 @@ textarea::placeholder { color:#405060; }
 
 <!-- ВКЛАДКИ -->
 <div style="max-width:980px;margin:0 auto 12px;padding:0 16px;">
-  <div style="display:flex;gap:4px;border-bottom:1px solid #283050;">
-    <button class="tab-btn active" onclick="switchTab('sheet',this)" style="font-family:Metamorphous,serif;font-size:11px;color:#8ab0f0;padding:8px 18px;border:1px solid #283050;border-bottom:1px solid #10121a;border-radius:6px 6px 0 0;cursor:pointer;background:#10121a;letter-spacing:1px;position:relative;bottom:-1px;">📜 Лист</button>
-    <button class="tab-btn" onclick="switchTab('spells',this)" style="font-family:Metamorphous,serif;font-size:11px;color:#405060;padding:8px 18px;border:1px solid transparent;border-radius:6px 6px 0 0;cursor:pointer;background:transparent;letter-spacing:1px;position:relative;bottom:-1px;">⚡ Шпаргалка</button>
-    <button class="tab-btn" onclick="switchTab('inventory',this)" style="font-family:Metamorphous,serif;font-size:11px;color:#405060;padding:8px 18px;border:1px solid transparent;border-radius:6px 6px 0 0;cursor:pointer;background:transparent;letter-spacing:1px;position:relative;bottom:-1px;">🎒 Инвентарь</button>
+  <div style="display:flex;gap:4px;border-bottom:1px solid #542026;">
+    <button class="tab-btn active" onclick="switchTab('sheet',this)" style="font-family:Metamorphous,serif;font-size:11px;color:#ff6b5f;padding:8px 18px;border:1px solid #542026;border-bottom:1px solid #16090c;border-radius:6px 6px 0 0;cursor:pointer;background:#16090c;letter-spacing:1px;position:relative;bottom:-1px;">📜 Лист</button>
+    <button class="tab-btn" onclick="switchTab('spells',this)" style="font-family:Metamorphous,serif;font-size:11px;color:#70484d;padding:8px 18px;border:1px solid transparent;border-radius:6px 6px 0 0;cursor:pointer;background:transparent;letter-spacing:1px;position:relative;bottom:-1px;">⚡ Шпаргалка</button>
+    <button class="tab-btn" onclick="switchTab('inventory',this)" style="font-family:Metamorphous,serif;font-size:11px;color:#70484d;padding:8px 18px;border:1px solid transparent;border-radius:6px 6px 0 0;cursor:pointer;background:transparent;letter-spacing:1px;position:relative;bottom:-1px;">🎒 Инвентарь</button>
   </div>
 </div>
 
@@ -281,13 +344,13 @@ textarea::placeholder { color:#405060; }
 
 <!-- БАННЕР -->
 <div style="height:260px;position:relative;overflow:hidden;">
-  <div id="upload-zone" onclick="document.getElementById('fi').click()" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;background:linear-gradient(135deg,#0a0c10 0%,#141822 40%,#1a1428 70%,#0a0c10 100%);">
+  <div id="upload-zone" onclick="document.getElementById('fi').click()" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;background:linear-gradient(135deg,#090608 0%,#1d0b10 40%,#21080e 70%,#090608 100%);">
     <div style="font-size:48px;opacity:0.15">⚡</div>
-    <div style="font-size:11px;color:#405060;letter-spacing:2px;font-family:Metamorphous,serif;">НАЖМИ ЧТОБЫ ЗАГРУЗИТЬ ПОРТРЕТ</div>
+    <div style="font-size:11px;color:#70484d;letter-spacing:2px;font-family:Metamorphous,serif;">НАЖМИ ЧТОБЫ ЗАГРУЗИТЬ ПОРТРЕТ</div>
   </div>
   <img id="portrait-img" alt="Луна" style="display:none;width:100%;height:100%;object-fit:cover;object-position:top center;">
   <!-- Градиенты поверх -->
-  <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,transparent 25%,rgba(10,12,16,0.5) 65%,#10121a 100%);"></div>
+  <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,transparent 25%,rgba(10,12,16,0.5) 65%,#16090c 100%);"></div>
   <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(10,12,16,0.4) 0%,transparent 30%,transparent 70%,rgba(10,12,16,0.4) 100%);"></div>
   <!-- Кнопка -->
   <div class="portrait-wrap" style="position:absolute;inset:0;" onclick="document.getElementById('fi').click()">
@@ -298,25 +361,25 @@ textarea::placeholder { color:#405060; }
   <!-- Имя и инфо -->
   <div style="position:absolute;bottom:0;left:0;right:0;padding:0 20px 16px;display:flex;align-items:flex-end;justify-content:space-between;">
     <div>
-      <div style="font-family:Metamorphous,serif;font-size:30px;line-height:1.1;background:linear-gradient(90deg,#e8c040,#ffffff,#8ab0f0,#e8c040);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 4s linear infinite;">Луна</div>
-      <div style="font-size:12px;color:#8ab0f0;margin-top:4px;letter-spacing:0.5px;">Полуэльф · Жрец 4 (Домен Бури) · Нейтрально-злая</div>
+      <div style="font-family:Metamorphous,serif;font-size:30px;line-height:1.1;background:linear-gradient(90deg,#ff4f45,#ffffff,#ff6b5f,#ff4f45);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 4s linear infinite;">Луна</div>
+      <div style="font-size:12px;color:#ff6b5f;margin-top:4px;letter-spacing:0.5px;">Полуэльф · Жрец 4 (Домен Бури) · Нейтрально-злая</div>
       <div style="display:grid;grid-template-columns:repeat(6,auto);gap:6px;margin-top:8px;width:fit-content;">
-        <div style="background:rgba(90,127,200,0.15);border:0.5px solid #283050;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#405060;text-transform:uppercase;">Раса</div><div style="font-size:11px;font-weight:bold;color:#d8e8f8;">Полуэльф</div></div>
-        <div style="background:rgba(90,127,200,0.15);border:0.5px solid #283050;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#405060;text-transform:uppercase;">Класс</div><div style="font-size:11px;font-weight:bold;color:#d8e8f8;">Жрец 4</div></div>
-        <div style="background:rgba(90,127,200,0.15);border:0.5px solid #283050;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#405060;text-transform:uppercase;">Опыт</div><div style="font-size:11px;font-weight:bold;color:#d8e8f8;">2700 / 6500</div></div>
-        <div style="background:rgba(90,127,200,0.15);border:0.5px solid #283050;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#405060;text-transform:uppercase;">Бог</div><div style="font-size:11px;font-weight:bold;color:#d8e8f8;">Актазион</div></div>
-        <div style="background:rgba(90,127,200,0.15);border:0.5px solid #283050;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#405060;text-transform:uppercase;">Скорость</div><div style="font-size:11px;font-weight:bold;color:#d8e8f8;">30 фт</div></div>
-        <div style="background:rgba(90,127,200,0.15);border:0.5px solid #283050;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#405060;text-transform:uppercase;">Уровень</div><div style="font-size:11px;font-weight:bold;color:#d8e8f8;">4</div></div>
+        <div style="background:rgba(183,53,53,0.15);border:0.5px solid #542026;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#70484d;text-transform:uppercase;">Раса</div><div style="font-size:11px;font-weight:bold;color:#f8e8e8;">Полуэльф</div></div>
+        <div style="background:rgba(183,53,53,0.15);border:0.5px solid #542026;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#70484d;text-transform:uppercase;">Класс</div><div style="font-size:11px;font-weight:bold;color:#f8e8e8;">Жрец 4</div></div>
+        <div style="background:rgba(183,53,53,0.15);border:0.5px solid #542026;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#70484d;text-transform:uppercase;">Опыт</div><div style="font-size:11px;font-weight:bold;color:#f8e8e8;">2700 / 6500</div></div>
+        <div style="background:rgba(183,53,53,0.15);border:0.5px solid #542026;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#70484d;text-transform:uppercase;">Бог</div><div style="font-size:11px;font-weight:bold;color:#f8e8e8;">Актазион</div></div>
+        <div style="background:rgba(183,53,53,0.15);border:0.5px solid #542026;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#70484d;text-transform:uppercase;">Скорость</div><div style="font-size:11px;font-weight:bold;color:#f8e8e8;">30 фт</div></div>
+        <div style="background:rgba(183,53,53,0.15);border:0.5px solid #542026;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#70484d;text-transform:uppercase;">Уровень</div><div style="font-size:11px;font-weight:bold;color:#f8e8e8;">4</div></div>
       </div>
     </div>
     <!-- HP -->
     <div style="display:flex;flex-direction:column;align-items:center;gap:4px;padding-bottom:4px;">
-      <div style="width:60px;height:60px;border-radius:50%;border:2px solid #e8c040;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(10,12,16,0.75);box-shadow:0 0 20px rgba(232,192,64,0.3);animation:thunder-glow 5s ease-in-out infinite;">
-        <div style="font-family:Metamorphous,serif;font-size:22px;color:#e8c040;line-height:1;">33</div>
-        <div style="font-size:7px;color:#7890a8;">макс: 33</div>
+      <div style="width:60px;height:60px;border-radius:50%;border:2px solid #ff4f45;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(10,12,16,0.75);box-shadow:0 0 20px rgba(255,79,69,0.3);animation:thunder-glow 5s ease-in-out infinite;">
+        <div style="font-family:Metamorphous,serif;font-size:22px;color:#ff4f45;line-height:1;">33</div>
+        <div style="font-size:7px;color:#c48b8b;">макс: 33</div>
       </div>
-      <div style="font-size:10px;color:#7890a8;">КД: <span style="font-family:Metamorphous,serif;font-size:16px;color:#c0ccd8;font-weight:bold;">18</span></div>
-      <div style="font-size:10px;color:#7890a8;">Иниц: <span style="font-weight:bold;color:#d8e8f8;">-1</span></div>
+      <div style="font-size:10px;color:#c48b8b;">КД: <span style="font-family:Metamorphous,serif;font-size:16px;color:#f4d7d7;font-weight:bold;">18</span></div>
+      <div style="font-size:10px;color:#c48b8b;">Иниц: <span style="font-weight:bold;color:#f8e8e8;">-1</span></div>
     </div>
   </div>
 </div>
@@ -325,236 +388,236 @@ textarea::placeholder { color:#405060; }
 <div class="lightning-bar"></div>
 
 <!-- PROFBAR -->
-<div style="display:flex;align-items:center;justify-content:space-between;padding:4px 14px;border-bottom:1px solid #283050;background:#0c0e16;font-size:8.5px;color:#7890a8;flex-wrap:wrap;gap:4px;">
-  <span class="tip">Бонус мастерства: <b style="font-family:Metamorphous,serif;font-size:10px;color:#8ab0f0;">+2</b>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:4px 14px;border-bottom:1px solid #542026;background:#100608;font-size:8.5px;color:#c48b8b;flex-wrap:wrap;gap:4px;">
+  <span class="tip">Бонус мастерства: <b style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;">+2</b>
     <div class="tip-box"><span class="tip-title">📖 Бонус мастерства</span>Добавляется к навыкам, атакам и спасброскам с владением.<br><br>Ур. 1–4: +2 · Ур. 5–8: +3</div>
   </span>
-  <span class="tip">Пассивная Внимательность: <b style="font-family:Metamorphous,serif;font-size:10px;color:#8ab0f0;">15</b>
+  <span class="tip">Пассивная Внимательность: <b style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;">15</b>
     <div class="tip-box"><span class="tip-title">👁 Пассивная Внимательность</span>= 10 + 3 (Муд) + 2 (владение) = 15</div>
   </span>
-  <span>Тёмное зрение: <b style="font-family:Metamorphous,serif;font-size:10px;color:#8ab0f0;">60 фт</b></span>
-  <span>Кубик хитов: <b style="font-family:Metamorphous,serif;font-size:10px;color:#8ab0f0;">4d8</b></span>
-  <span>Подготовлено заклинаний: <b style="font-family:Metamorphous,serif;font-size:10px;color:#8ab0f0;">7</b></span>
+  <span>Тёмное зрение: <b style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;">60 фт</b></span>
+  <span>Кубик хитов: <b style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;">4d8</b></span>
+  <span>Подготовлено заклинаний: <b style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;">7</b></span>
 </div>
 
 <!-- MAIN GRID -->
-<div style="display:grid;grid-template-columns:90px 1fr 1.1fr;border-bottom:1px solid #283050;">
+<div style="display:grid;grid-template-columns:90px 1fr 1.1fr;border-bottom:1px solid #542026;">
 
   <!-- ХАРАКТЕРИСТИКИ -->
-  <div style="border-right:1px solid #283050;padding:8px 5px;display:flex;flex-direction:column;gap:4px;">
-    <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:1.5px;text-align:center;border-bottom:1px solid #283050;padding-bottom:2px;margin-bottom:2px;">Хар-ки</div>
+  <div style="border-right:1px solid #542026;padding:8px 5px;display:flex;flex-direction:column;gap:4px;">
+    <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1.5px;text-align:center;border-bottom:1px solid #542026;padding-bottom:2px;margin-bottom:2px;">Хар-ки</div>
     <!-- Сила 13+1=14 нет, Сила просто 13 -->
-    <div class="tip" style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:3px 2px;text-align:center;animation:thunder-glow 6s ease-in-out infinite;">
-      <div class="tip-left" style="font-size:7px;color:#405060;text-transform:uppercase;">Сила<div class="tip-box"><span class="tip-title">💪 Сила</span>Атлетика, ближний бой без фехтования, ношение грузов.<br><span class="tip-warn">Жрец часто бьёт навершием — Сила используется!</span></div></div>
-      <div style="font-family:Metamorphous,serif;font-size:17px;color:#c0ccd8;line-height:1;">13</div>
-      <div style="font-size:10px;color:#8ab0f0;font-weight:bold;">+1</div>
+    <div class="tip" style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:3px 2px;text-align:center;animation:thunder-glow 6s ease-in-out infinite;">
+      <div class="tip-left" style="font-size:7px;color:#70484d;text-transform:uppercase;">Сила<div class="tip-box"><span class="tip-title">💪 Сила</span>Атлетика, ближний бой без фехтования, ношение грузов.<br><span class="tip-warn">Жрец часто бьёт навершием — Сила используется!</span></div></div>
+      <div style="font-family:Metamorphous,serif;font-size:17px;color:#f4d7d7;line-height:1;">13</div>
+      <div style="font-size:10px;color:#ff6b5f;font-weight:bold;">+1</div>
     </div>
-    <div class="tip" style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:3px 2px;text-align:center;">
-      <div class="tip-left" style="font-size:7px;color:#405060;text-transform:uppercase;">Ловкость<div class="tip-box"><span class="tip-title">🏃 Ловкость</span>Инициатива, КД без доспехов. У Луны -1 — носи доспехи всегда!<br><span class="tip-warn">Ловкость 8 — инициатива -1</span></div></div>
-      <div style="font-family:Metamorphous,serif;font-size:17px;color:#c0ccd8;line-height:1;">8</div>
-      <div style="font-size:10px;color:#8ab0f0;font-weight:bold;">-1</div>
+    <div class="tip" style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:3px 2px;text-align:center;">
+      <div class="tip-left" style="font-size:7px;color:#70484d;text-transform:uppercase;">Ловкость<div class="tip-box"><span class="tip-title">🏃 Ловкость</span>Инициатива, КД без доспехов. У Луны -1 — носи доспехи всегда!<br><span class="tip-warn">Ловкость 8 — инициатива -1</span></div></div>
+      <div style="font-family:Metamorphous,serif;font-size:17px;color:#f4d7d7;line-height:1;">8</div>
+      <div style="font-size:10px;color:#ff6b5f;font-weight:bold;">-1</div>
     </div>
-    <div class="tip" style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:3px 2px;text-align:center;">
-      <div class="tip-left" style="font-size:7px;color:#405060;text-transform:uppercase;">Телосл.<div class="tip-box"><span class="tip-title">❤ Телосложение</span>Хиты на каждом уровне, концентрация. +2 к хитам каждый уровень.</div></div>
-      <div style="font-family:Metamorphous,serif;font-size:17px;color:#c0ccd8;line-height:1;">14</div>
-      <div style="font-size:10px;color:#8ab0f0;font-weight:bold;">+2</div>
+    <div class="tip" style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:3px 2px;text-align:center;">
+      <div class="tip-left" style="font-size:7px;color:#70484d;text-transform:uppercase;">Телосл.<div class="tip-box"><span class="tip-title">❤ Телосложение</span>Хиты на каждом уровне, концентрация. +2 к хитам каждый уровень.</div></div>
+      <div style="font-family:Metamorphous,serif;font-size:17px;color:#f4d7d7;line-height:1;">14</div>
+      <div style="font-size:10px;color:#ff6b5f;font-weight:bold;">+2</div>
     </div>
-    <div class="tip" style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:3px 2px;text-align:center;">
-      <div class="tip-left" style="font-size:7px;color:#405060;text-transform:uppercase;">Интеллект<div class="tip-box"><span class="tip-title">📚 Интеллект</span>Аркана, История, Расследование, Природа, Религия.</div></div>
-      <div style="font-family:Metamorphous,serif;font-size:17px;color:#c0ccd8;line-height:1;">10</div>
-      <div style="font-size:10px;color:#8ab0f0;font-weight:bold;">+0</div>
+    <div class="tip" style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:3px 2px;text-align:center;">
+      <div class="tip-left" style="font-size:7px;color:#70484d;text-transform:uppercase;">Интеллект<div class="tip-box"><span class="tip-title">📚 Интеллект</span>Аркана, История, Расследование, Природа, Религия.</div></div>
+      <div style="font-family:Metamorphous,serif;font-size:17px;color:#f4d7d7;line-height:1;">10</div>
+      <div style="font-size:10px;color:#ff6b5f;font-weight:bold;">+0</div>
     </div>
-    <div class="tip" style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:3px 2px;text-align:center;animation:storm-border 4s ease-in-out infinite;border-width:1px !important;">
-      <div class="tip-left" style="font-size:7px;color:#405060;text-transform:uppercase;">Мудрость<div class="tip-box"><span class="tip-title">🔮 Мудрость ★</span>Главная характеристика жреца! СС заклинаний, бонус атаки, количество подготовленных заклинаний, Внимательность.<br><br><span class="tip-good">Мудрость 17 → СС 13, +5 атака, +7 подготовленных</span></div></div>
-      <div style="font-family:Metamorphous,serif;font-size:17px;line-height:1;background:linear-gradient(90deg,#8ab0f0,#e8c040,#8ab0f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 3s linear infinite;">17</div>
-      <div style="font-size:10px;font-weight:bold;background:linear-gradient(90deg,#8ab0f0,#e8c040,#8ab0f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 3s linear infinite;">+3</div>
+    <div class="tip" style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:3px 2px;text-align:center;animation:storm-border 4s ease-in-out infinite;border-width:1px !important;">
+      <div class="tip-left" style="font-size:7px;color:#70484d;text-transform:uppercase;">Мудрость<div class="tip-box"><span class="tip-title">🔮 Мудрость ★</span>Главная характеристика жреца! СС заклинаний, бонус атаки, количество подготовленных заклинаний, Внимательность.<br><br><span class="tip-good">Мудрость 17 → СС 13, +5 атака, +7 подготовленных</span></div></div>
+      <div style="font-family:Metamorphous,serif;font-size:17px;line-height:1;background:linear-gradient(90deg,#ff6b5f,#ff4f45,#ff6b5f);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 3s linear infinite;">17</div>
+      <div style="font-size:10px;font-weight:bold;background:linear-gradient(90deg,#ff6b5f,#ff4f45,#ff6b5f);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 3s linear infinite;">+3</div>
     </div>
-    <div class="tip" style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:3px 2px;text-align:center;">
-      <div class="tip-left" style="font-size:7px;color:#405060;text-transform:uppercase;">Харизма<div class="tip-box"><span class="tip-title">✨ Харизма</span>Обман, Убеждение, Запугивание. Полуэльф +1 → 13.<br><span class="tip-good">Полуэльф даёт +1 к Харизме!</span></div></div>
-      <div style="font-family:Metamorphous,serif;font-size:17px;color:#c0ccd8;line-height:1;">13</div>
-      <div style="font-size:10px;color:#8ab0f0;font-weight:bold;">+1</div>
+    <div class="tip" style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:3px 2px;text-align:center;">
+      <div class="tip-left" style="font-size:7px;color:#70484d;text-transform:uppercase;">Харизма<div class="tip-box"><span class="tip-title">✨ Харизма</span>Обман, Убеждение, Запугивание. Полуэльф +1 → 13.<br><span class="tip-good">Полуэльф даёт +1 к Харизме!</span></div></div>
+      <div style="font-family:Metamorphous,serif;font-size:17px;color:#f4d7d7;line-height:1;">13</div>
+      <div style="font-size:10px;color:#ff6b5f;font-weight:bold;">+1</div>
     </div>
   </div>
 
   <!-- НАВЫКИ -->
-  <div style="border-right:1px solid #283050;padding:6px 8px;">
-    <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:1.5px;text-align:center;border-bottom:1px solid #283050;padding-bottom:2px;margin-bottom:6px;">Спасброски</div>
+  <div style="border-right:1px solid #542026;padding:6px 8px;">
+    <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1.5px;text-align:center;border-bottom:1px solid #542026;padding-bottom:2px;margin-bottom:6px;">Спасброски</div>
     <ul style="list-style:none;display:flex;flex-direction:column;gap:1px;margin-bottom:6px;">
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;color:#d8e8f8;padding:1px 0;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+1</span><span>Сила</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;color:#d8e8f8;padding:1px 0;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">-1</span><span>Ловкость</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;color:#d8e8f8;padding:1px 0;"><div class="dot p"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+4</span><span>Телосложение</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;color:#d8e8f8;padding:1px 0;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+0</span><span>Интеллект</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;color:#d8e8f8;padding:1px 0;"><div class="dot p"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+5</span><span>Мудрость</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;color:#d8e8f8;padding:1px 0;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+1</span><span>Харизма</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;color:#f8e8e8;padding:1px 0;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+1</span><span>Сила</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;color:#f8e8e8;padding:1px 0;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">-1</span><span>Ловкость</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;color:#f8e8e8;padding:1px 0;"><div class="dot p"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+4</span><span>Телосложение</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;color:#f8e8e8;padding:1px 0;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+0</span><span>Интеллект</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;color:#f8e8e8;padding:1px 0;"><div class="dot p"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+5</span><span>Мудрость</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;color:#f8e8e8;padding:1px 0;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+1</span><span>Харизма</span></li>
     </ul>
-    <div style="text-align:center;color:#5a7fc8;font-size:9px;padding:2px 0;letter-spacing:3px;">⚡ ⚡ ⚡</div>
-    <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:1.5px;text-align:center;border-bottom:1px solid #283050;padding-bottom:2px;margin:4px 0 6px;">Навыки</div>
+    <div style="text-align:center;color:#b73535;font-size:9px;padding:2px 0;letter-spacing:3px;">⚡ ⚡ ⚡</div>
+    <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1.5px;text-align:center;border-bottom:1px solid #542026;padding-bottom:2px;margin:4px 0 6px;">Навыки</div>
     <ul style="list-style:none;display:flex;flex-direction:column;gap:1px;">
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+1</span><span style="flex:1;color:#d8e8f8;">Атлетика</span><span style="font-size:7.5px;color:#405060;">Сил</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">-1</span><span style="flex:1;color:#d8e8f8;">Акробатика</span><span style="font-size:7.5px;color:#405060;">Лов</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot p"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+4</span><span style="flex:1;color:#d8e8f8;">Аркана</span><span style="font-size:7.5px;color:#405060;">Инт</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+0</span><span style="flex:1;color:#d8e8f8;">История</span><span style="font-size:7.5px;color:#405060;">Инт</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot p"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+5</span><span style="flex:1;color:#d8e8f8;">Внимательность</span><span style="font-size:7.5px;color:#405060;">Муд</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+3</span><span style="flex:1;color:#d8e8f8;">Проницательность</span><span style="font-size:7.5px;color:#405060;">Муд</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+3</span><span style="flex:1;color:#d8e8f8;">Медицина</span><span style="font-size:7.5px;color:#405060;">Муд</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+3</span><span style="flex:1;color:#d8e8f8;">Выживание</span><span style="font-size:7.5px;color:#405060;">Муд</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+1</span><span style="flex:1;color:#d8e8f8;">Обман</span><span style="font-size:7.5px;color:#405060;">Хар</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+1</span><span style="flex:1;color:#d8e8f8;">Запугивание</span><span style="font-size:7.5px;color:#405060;">Хар</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+1</span><span style="flex:1;color:#d8e8f8;">Убеждение</span><span style="font-size:7.5px;color:#405060;">Хар</span></li>
-      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot p"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#8ab0f0;min-width:18px;text-align:right;">+5</span><span style="flex:1;color:#d8e8f8;">Религия</span><span style="font-size:7.5px;color:#405060;">Инт</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+1</span><span style="flex:1;color:#f8e8e8;">Атлетика</span><span style="font-size:7.5px;color:#70484d;">Сил</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">-1</span><span style="flex:1;color:#f8e8e8;">Акробатика</span><span style="font-size:7.5px;color:#70484d;">Лов</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot p"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+4</span><span style="flex:1;color:#f8e8e8;">Аркана</span><span style="font-size:7.5px;color:#70484d;">Инт</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+0</span><span style="flex:1;color:#f8e8e8;">История</span><span style="font-size:7.5px;color:#70484d;">Инт</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot p"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+5</span><span style="flex:1;color:#f8e8e8;">Внимательность</span><span style="font-size:7.5px;color:#70484d;">Муд</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+3</span><span style="flex:1;color:#f8e8e8;">Проницательность</span><span style="font-size:7.5px;color:#70484d;">Муд</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+3</span><span style="flex:1;color:#f8e8e8;">Медицина</span><span style="font-size:7.5px;color:#70484d;">Муд</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+3</span><span style="flex:1;color:#f8e8e8;">Выживание</span><span style="font-size:7.5px;color:#70484d;">Муд</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+1</span><span style="flex:1;color:#f8e8e8;">Обман</span><span style="font-size:7.5px;color:#70484d;">Хар</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+1</span><span style="flex:1;color:#f8e8e8;">Запугивание</span><span style="font-size:7.5px;color:#70484d;">Хар</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+1</span><span style="flex:1;color:#f8e8e8;">Убеждение</span><span style="font-size:7.5px;color:#70484d;">Хар</span></li>
+      <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot p"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+5</span><span style="flex:1;color:#f8e8e8;">Религия</span><span style="font-size:7.5px;color:#70484d;">Инт</span></li>
     </ul>
-    <div style="font-size:6.5px;color:#405060;margin-top:4px;">Полуэльф: доп. владение Аркана и Религия</div>
+    <div style="font-size:6.5px;color:#70484d;margin-top:4px;">Полуэльф: доп. владение Аркана и Религия</div>
   </div>
 
   <!-- БОЙ -->
   <div style="padding:8px 10px;">
-    <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:1.5px;text-align:center;border-bottom:1px solid #283050;padding-bottom:2px;margin-bottom:8px;">Бой</div>
+    <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1.5px;text-align:center;border-bottom:1px solid #542026;padding-bottom:2px;margin-bottom:8px;">Бой</div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-bottom:8px;">
-      <div class="tip" style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:4px;text-align:center;">
-        <div style="font-family:Metamorphous,serif;font-size:15px;color:#c0ccd8;">18</div>
-        <div style="font-size:7px;color:#405060;text-transform:uppercase;">КД</div>
+      <div class="tip" style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:4px;text-align:center;">
+        <div style="font-family:Metamorphous,serif;font-size:15px;color:#f4d7d7;">18</div>
+        <div style="font-size:7px;color:#70484d;text-transform:uppercase;">КД</div>
         <div class="tip-box"><span class="tip-title">🛡 КД 18</span>Кольчуга (16) + щит (+2) = 18.<br><span class="tip-good">Жрец домена Бури владеет тяжёлыми доспехами и щитами!</span></div>
       </div>
-      <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:4px;text-align:center;">
-        <div style="font-family:Metamorphous,serif;font-size:15px;color:#c0ccd8;">-1</div>
-        <div style="font-size:7px;color:#405060;text-transform:uppercase;">Инициатива</div>
+      <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:4px;text-align:center;">
+        <div style="font-family:Metamorphous,serif;font-size:15px;color:#f4d7d7;">-1</div>
+        <div style="font-size:7px;color:#70484d;text-transform:uppercase;">Инициатива</div>
       </div>
-      <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:4px;text-align:center;">
-        <div style="font-family:Metamorphous,serif;font-size:15px;color:#c0ccd8;">30 фт</div>
-        <div style="font-size:7px;color:#405060;text-transform:uppercase;">Скорость</div>
+      <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:4px;text-align:center;">
+        <div style="font-family:Metamorphous,serif;font-size:15px;color:#f4d7d7;">30 фт</div>
+        <div style="font-size:7px;color:#70484d;text-transform:uppercase;">Скорость</div>
       </div>
-      <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:4px;text-align:center;">
-        <div style="font-family:Metamorphous,serif;font-size:15px;color:#e8c040;">33</div>
-        <div style="font-size:7px;color:#405060;text-transform:uppercase;">Макс хиты</div>
+      <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:4px;text-align:center;">
+        <div style="font-family:Metamorphous,serif;font-size:15px;color:#ff4f45;">33</div>
+        <div style="font-size:7px;color:#70484d;text-transform:uppercase;">Макс хиты</div>
       </div>
-      <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:4px;text-align:center;">
-        <div style="font-family:Metamorphous,serif;font-size:15px;color:#c0ccd8;">4d8</div>
-        <div style="font-size:7px;color:#405060;text-transform:uppercase;">Куб хитов</div>
+      <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:4px;text-align:center;">
+        <div style="font-family:Metamorphous,serif;font-size:15px;color:#f4d7d7;">4d8</div>
+        <div style="font-size:7px;color:#70484d;text-transform:uppercase;">Куб хитов</div>
       </div>
-      <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:4px;text-align:center;">
-        <div style="font-family:Metamorphous,serif;font-size:15px;color:#c0ccd8;">+2</div>
-        <div style="font-size:7px;color:#405060;text-transform:uppercase;">Бонус мастерства</div>
+      <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:4px;text-align:center;">
+        <div style="font-family:Metamorphous,serif;font-size:15px;color:#f4d7d7;">+2</div>
+        <div style="font-size:7px;color:#70484d;text-transform:uppercase;">Бонус мастерства</div>
       </div>
     </div>
 
-    <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:1px;text-align:center;border-bottom:1px solid #283050;padding-bottom:2px;margin-bottom:4px;">Атаки</div>
+    <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1px;text-align:center;border-bottom:1px solid #542026;padding-bottom:2px;margin-bottom:4px;">Атаки</div>
     <div style="overflow-x:auto;">
       <table style="width:100%;font-size:9px;border-collapse:collapse;">
         <tr>
-          <th style="background:rgba(90,127,200,0.13);color:#8ab0f0;padding:3px 4px;text-align:left;font-size:7.5px;border:0.5px solid #283050;">Оружие</th>
-          <th style="background:rgba(90,127,200,0.13);color:#8ab0f0;padding:3px 4px;text-align:left;font-size:7.5px;border:0.5px solid #283050;">Атака</th>
-          <th style="background:rgba(90,127,200,0.13);color:#8ab0f0;padding:3px 4px;text-align:left;font-size:7.5px;border:0.5px solid #283050;">Урон / Тип</th>
+          <th style="background:rgba(183,53,53,0.13);color:#ff6b5f;padding:3px 4px;text-align:left;font-size:7.5px;border:0.5px solid #542026;">Оружие</th>
+          <th style="background:rgba(183,53,53,0.13);color:#ff6b5f;padding:3px 4px;text-align:left;font-size:7.5px;border:0.5px solid #542026;">Атака</th>
+          <th style="background:rgba(183,53,53,0.13);color:#ff6b5f;padding:3px 4px;text-align:left;font-size:7.5px;border:0.5px solid #542026;">Урон / Тип</th>
         </tr>
-        <tr class="atk-row"><td style="padding:3px 4px;border:0.5px solid #283050;color:#d8e8f8;">Навершие булавы</td><td style="padding:3px 4px;border:0.5px solid #283050;color:#d8e8f8;">+3</td><td style="padding:3px 4px;border:0.5px solid #283050;color:#d8e8f8;">1d6+1 / дробящий</td></tr>
-        <tr class="atk-row"><td style="padding:3px 4px;border:0.5px solid #283050;color:#d8e8f8;">Священное пламя (загов.)</td><td style="padding:3px 4px;border:0.5px solid #283050;color:#d8e8f8;">СС 13</td><td style="padding:3px 4px;border:0.5px solid #283050;color:#d8e8f8;">1d8 огонь (Лов)</td></tr>
-        <tr class="atk-row"><td style="padding:3px 4px;border:0.5px solid #283050;color:#d8e8f8;">Удар молнией (1ур)</td><td style="padding:3px 4px;border:0.5px solid #283050;color:#d8e8f8;">+5</td><td style="padding:3px 4px;border:0.5px solid #283050;color:#d8e8f8;">3d10 молния, 60 фт</td></tr>
+        <tr class="atk-row"><td style="padding:3px 4px;border:0.5px solid #542026;color:#f8e8e8;">Навершие булавы</td><td style="padding:3px 4px;border:0.5px solid #542026;color:#f8e8e8;">+3</td><td style="padding:3px 4px;border:0.5px solid #542026;color:#f8e8e8;">1d6+1 / дробящий</td></tr>
+        <tr class="atk-row"><td style="padding:3px 4px;border:0.5px solid #542026;color:#f8e8e8;">Священное пламя (загов.)</td><td style="padding:3px 4px;border:0.5px solid #542026;color:#f8e8e8;">СС 13</td><td style="padding:3px 4px;border:0.5px solid #542026;color:#f8e8e8;">1d8 огонь (Лов)</td></tr>
+        <tr class="atk-row"><td style="padding:3px 4px;border:0.5px solid #542026;color:#f8e8e8;">Удар молнией (1ур)</td><td style="padding:3px 4px;border:0.5px solid #542026;color:#f8e8e8;">+5</td><td style="padding:3px 4px;border:0.5px solid #542026;color:#f8e8e8;">3d10 молния, 60 фт</td></tr>
       </table>
     </div>
 
     <div style="margin-top:8px;">
-      <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:1px;text-align:center;border-bottom:1px solid #283050;padding-bottom:2px;margin-bottom:4px;">Заклинания (Мудр., СС 13, Атака +5)</div>
-      <div style="font-size:9px;color:#d8e8f8;line-height:1.7;">
-        <span style="color:#e8c040;font-weight:bold;">Домен (всегда подготовлены):</span><br>
-        ◆ <span style="color:#8ab0f0;font-weight:bold;">Туманное облако</span> · <span style="color:#8ab0f0;font-weight:bold;">Громовая волна</span><br>
-        ◆ <span style="color:#8ab0f0;font-weight:bold;">Разрыв</span> · <span style="color:#8ab0f0;font-weight:bold;">Раскаты грома</span><br>
-        <span style="color:#e8c040;font-weight:bold;">Подготовленные (7 штук):</span><br>
-        ◆ <span style="color:#8ab0f0;">Лечение ран</span> · <span style="color:#8ab0f0;">Направляющий удар</span><br>
-        ◆ <span style="color:#8ab0f0;">Удар молнией</span> · <span style="color:#8ab0f0;">Духовное оружие</span><br>
-        ◆ <span style="color:#8ab0f0;">Священное пламя</span> (загов.)
+      <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1px;text-align:center;border-bottom:1px solid #542026;padding-bottom:2px;margin-bottom:4px;">Заклинания (Мудр., СС 13, Атака +5)</div>
+      <div style="font-size:9px;color:#f8e8e8;line-height:1.7;">
+        <span style="color:#ff4f45;font-weight:bold;">Домен (всегда подготовлены):</span><br>
+        ◆ <span style="color:#ff6b5f;font-weight:bold;">Туманное облако</span> · <span style="color:#ff6b5f;font-weight:bold;">Громовая волна</span><br>
+        ◆ <span style="color:#ff6b5f;font-weight:bold;">Разрыв</span> · <span style="color:#ff6b5f;font-weight:bold;">Раскаты грома</span><br>
+        <span style="color:#ff4f45;font-weight:bold;">Подготовленные (7 штук):</span><br>
+        ◆ <span style="color:#ff6b5f;">Лечение ран</span> · <span style="color:#ff6b5f;">Направляющий удар</span><br>
+        ◆ <span style="color:#ff6b5f;">Удар молнией</span> · <span style="color:#ff6b5f;">Духовное оружие</span><br>
+        ◆ <span style="color:#ff6b5f;">Священное пламя</span> (загов.)
       </div>
     </div>
 
     <div style="margin-top:8px;">
-      <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:1px;text-align:center;border-bottom:1px solid #283050;padding-bottom:2px;margin-bottom:4px;">Ячейки заклинаний</div>
-      <div style="font-size:9px;color:#d8e8f8;line-height:1.7;">
+      <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1px;text-align:center;border-bottom:1px solid #542026;padding-bottom:2px;margin-bottom:4px;">Ячейки заклинаний</div>
+      <div style="font-size:9px;color:#f8e8e8;line-height:1.7;">
         1 ур.: □□□□ (4) · 2 ур.: □□□ (3)<br>
-        <span style="font-size:7.5px;color:#405060;">Восстанавливаются после длинного отдыха</span>
+        <span style="font-size:7.5px;color:#70484d;">Восстанавливаются после длинного отдыха</span>
       </div>
     </div>
   </div>
 </div>
 
 <!-- УМЕНИЯ -->
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:8px 10px;border-top:1px solid #283050;">
-  <div style="border:1px solid #283050;border-radius:4px;padding:8px;animation:storm-border 5s ease-in-out infinite;">
-    <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #283050;padding-bottom:3px;margin-bottom:5px;">Черты расы: Полуэльф</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">+2 Харизма</strong> (→13), +1 к двум другим (Мудрость, Сила)</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Тёмное зрение</strong> — 60 фт</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Наследие фей</strong> — преим. против очарования, иммун. к усыплению</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Универсальность</strong> — владение двумя доп. навыками: Аркана, Религия</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Языки:</strong> Общий, Эльфийский + ещё один</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:8px 10px;border-top:1px solid #542026;">
+  <div style="border:1px solid #542026;border-radius:4px;padding:8px;animation:storm-border 5s ease-in-out infinite;">
+    <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #542026;padding-bottom:3px;margin-bottom:5px;">Черты расы: Полуэльф</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">+2 Харизма</strong> (→13), +1 к двум другим (Мудрость, Сила)</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Тёмное зрение</strong> — 60 фт</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Наследие фей</strong> — преим. против очарования, иммун. к усыплению</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Универсальность</strong> — владение двумя доп. навыками: Аркана, Религия</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Языки:</strong> Общий, Эльфийский + ещё один</div>
   </div>
-  <div style="border:1px solid #283050;border-radius:4px;padding:8px;animation:thunder-glow 4s ease-in-out infinite;">
-    <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #283050;padding-bottom:3px;margin-bottom:5px;">Умения жреца</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Использование магии</strong> — Муд, СС 13, атака +5</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Ритуальное колдовство</strong> — без ячейки</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Проведение энергии</strong> — 1/отдых: Изгнание нежити + Разрушительный гнев</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Спасброски:</strong> Телосложение, Мудрость</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Владения:</strong> Тяжёлые доспехи, щиты, все оружия</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Улучшение хар-к (4 ур.):</strong> +2 Мудрость (15→17)</div>
+  <div style="border:1px solid #542026;border-radius:4px;padding:8px;animation:thunder-glow 4s ease-in-out infinite;">
+    <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #542026;padding-bottom:3px;margin-bottom:5px;">Умения жреца</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Использование магии</strong> — Муд, СС 13, атака +5</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Ритуальное колдовство</strong> — без ячейки</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Проведение энергии</strong> — 1/отдых: Изгнание нежити + Разрушительный гнев</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Спасброски:</strong> Телосложение, Мудрость</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Владения:</strong> Тяжёлые доспехи, щиты, все оружия</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Улучшение хар-к (4 ур.):</strong> +2 Мудрость (15→17)</div>
   </div>
-  <div style="border:1.5px solid #3a7060;border-radius:4px;padding:8px;background:rgba(58,112,96,0.08);animation:cleric-border 4s ease-in-out infinite;">
-    <div style="font-family:Metamorphous,serif;font-size:8px;color:#60d0b0;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #3a7060;padding-bottom:3px;margin-bottom:5px;">Домен Бури — Актазион</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Карающий удар грома</strong> — реакция когда попали по тебе: 2d8 грома/молнии (СС Лов 13)</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Владение тяжёлыми доспехами</strong> — с 1 уровня</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Проведение энергии: Разрушительный гнев</strong> — бросок урона молнией/громом → максимальный урон!</div>
-    <div style="font-size:8.5px;color:#d8e8f8;line-height:1.6;">◆ <strong style="color:#c0ccd8;">Заклинания домена (всегда подготовлены):</strong> Туманное облако, Громовая волна, Разрыв, Раскаты грома</div>
+  <div style="border:1.5px solid #733028;border-radius:4px;padding:8px;background:rgba(115,48,40,0.08);animation:cleric-border 4s ease-in-out infinite;">
+    <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff8c7d;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #733028;padding-bottom:3px;margin-bottom:5px;">Домен Бури — Актазион</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Карающий удар грома</strong> — реакция когда попали по тебе: 2d8 грома/молнии (СС Лов 13)</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Владение тяжёлыми доспехами</strong> — с 1 уровня</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Проведение энергии: Разрушительный гнев</strong> — бросок урона молнией/громом → максимальный урон!</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Заклинания домена (всегда подготовлены):</strong> Туманное облако, Громовая волна, Разрыв, Раскаты грома</div>
   </div>
 </div>
 
 <!-- СНАРЯЖЕНИЕ -->
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:6px 10px;border-top:1px solid #283050;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:6px 10px;border-top:1px solid #542026;">
   <div>
-    <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #283050;padding-bottom:2px;margin-bottom:6px;">Снаряжение</div>
-    <ul style="list-style:none;font-size:9px;color:#d8e8f8;line-height:1.7;">
-      <li style="padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#5a7fc8;font-size:7px;top:2px;">◆</span>Кольчуга (КД 16)</li>
-      <li style="padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#5a7fc8;font-size:7px;top:2px;">◆</span>Щит (+2 КД)</li>
-      <li style="padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#5a7fc8;font-size:7px;top:2px;">◆</span>Булава</li>
-      <li style="padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#5a7fc8;font-size:7px;top:2px;">◆</span>Священный символ Актазиона</li>
-      <li style="padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#5a7fc8;font-size:7px;top:2px;">◆</span>Рюкзак священника</li>
-      <li style="padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#5a7fc8;font-size:7px;top:2px;">◆</span>Факелы × 5 · Фляга · Пайки × 5</li>
+    <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #542026;padding-bottom:2px;margin-bottom:6px;">Снаряжение</div>
+    <ul style="list-style:none;font-size:9px;color:#f8e8e8;line-height:1.7;">
+      <li style="padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#b73535;font-size:7px;top:2px;">◆</span>Кольчуга (КД 16)</li>
+      <li style="padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#b73535;font-size:7px;top:2px;">◆</span>Щит (+2 КД)</li>
+      <li style="padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#b73535;font-size:7px;top:2px;">◆</span>Булава</li>
+      <li style="padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#b73535;font-size:7px;top:2px;">◆</span>Священный символ Актазиона</li>
+      <li style="padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#b73535;font-size:7px;top:2px;">◆</span>Рюкзак священника</li>
+      <li style="padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#b73535;font-size:7px;top:2px;">◆</span>Факелы × 5 · Фляга · Пайки × 5</li>
     </ul>
   </div>
   <div>
-    <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #283050;padding-bottom:2px;margin-bottom:6px;">Владения и валюта</div>
-    <div style="font-size:9px;color:#d8e8f8;line-height:1.7;">
+    <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #542026;padding-bottom:2px;margin-bottom:6px;">Владения и валюта</div>
+    <div style="font-size:9px;color:#f8e8e8;line-height:1.7;">
       Все доспехи · Щиты · Все оружия<br>
       Спасброски: Телосложение, Мудрость<br>
       Языки: Общий, Эльфийский<br>
-      <strong style="background:linear-gradient(90deg,#b8860b,#ffd700,#ffec6e,#ffd700,#b8860b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 2s linear infinite;">💰 15 зм · 0 см</strong>
+      <strong style="background:linear-gradient(90deg,#7e241f,#ff4f45,#ff9a8d,#ff4f45,#7e241f);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 2s linear infinite;">💰 15 зм · 0 см</strong>
     </div>
   </div>
 </div>
 
 <!-- ИСТОРИЯ -->
-<div style="padding:8px 10px;border-top:1px solid #283050;background:rgba(90,127,200,0.03);">
-  <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #283050;padding-bottom:2px;margin-bottom:6px;">История</div>
-  <div style="font-size:9px;color:#7890a8;line-height:1.7;font-style:italic;">Луна — дочь эльфийской матери и человека, которого она никогда не знала. Росла в портовом городе, где грозы с моря были обычным делом. В детстве пережила кораблекрушение — единственная выжившая. С тех пор верит, что <strong style="font-style:normal;color:#c0ccd8;">Актазион</strong> сохранил её жизнь не из милости, а из расчёта. Бог грозового возмездия не щадит слабых — он испытывает их. Луна приняла эту логику: она не молится о помощи, она <strong style="font-style:normal;color:#e8c040;">исполняет волю бури</strong>. Справедливость в её понимании — это не прощение. Это удар молнии в нужное место.</div>
+<div style="padding:8px 10px;border-top:1px solid #542026;background:rgba(183,53,53,0.03);">
+  <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #542026;padding-bottom:2px;margin-bottom:6px;">История</div>
+  <div style="font-size:9px;color:#c48b8b;line-height:1.7;font-style:italic;">Луна — дочь эльфийской матери и человека, которого она никогда не знала. Росла в портовом городе, где грозы с моря были обычным делом. В детстве пережила кораблекрушение — единственная выжившая. С тех пор верит, что <strong style="font-style:normal;color:#f4d7d7;">Актазион</strong> сохранил её жизнь не из милости, а из расчёта. Бог грозового возмездия не щадит слабых — он испытывает их. Луна приняла эту логику: она не молится о помощи, она <strong style="font-style:normal;color:#ff4f45;">исполняет волю бури</strong>. Справедливость в её понимании — это не прощение. Это удар молнии в нужное место.</div>
 </div>
 
 <!-- ЧЕРТЫ -->
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;padding:6px 10px;border-top:1px solid #283050;">
-  <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:6px;">
-    <div style="font-size:7.5px;color:#405060;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;font-family:Metamorphous,serif;">Черты личности</div>
-    <div style="font-size:8.5px;color:#7890a8;line-height:1.5;font-style:italic;">Говорит мало. Смотрит долго. Улыбается только когда становится по-настоящему опасно.</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;padding:6px 10px;border-top:1px solid #542026;">
+  <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:6px;">
+    <div style="font-size:7.5px;color:#70484d;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;font-family:Metamorphous,serif;">Черты личности</div>
+    <div style="font-size:8.5px;color:#c48b8b;line-height:1.5;font-style:italic;">Говорит мало. Смотрит долго. Улыбается только когда становится по-настоящему опасно.</div>
   </div>
-  <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:6px;">
-    <div style="font-size:7.5px;color:#405060;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;font-family:Metamorphous,serif;">Идеал</div>
-    <div style="font-size:8.5px;color:#7890a8;line-height:1.5;font-style:italic;">Возмездие — это не месть. Это равновесие. Кто нарушил порядок — должен заплатить.</div>
+  <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:6px;">
+    <div style="font-size:7.5px;color:#70484d;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;font-family:Metamorphous,serif;">Идеал</div>
+    <div style="font-size:8.5px;color:#c48b8b;line-height:1.5;font-style:italic;">Возмездие — это не месть. Это равновесие. Кто нарушил порядок — должен заплатить.</div>
   </div>
-  <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:6px;">
-    <div style="font-size:7.5px;color:#405060;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;font-family:Metamorphous,serif;">Привязанность</div>
-    <div style="font-size:8.5px;color:#7890a8;line-height:1.5;font-style:italic;">Священный символ Актазиона — найден в обломках того корабля. Единственное что у неё было.</div>
+  <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:6px;">
+    <div style="font-size:7.5px;color:#70484d;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;font-family:Metamorphous,serif;">Привязанность</div>
+    <div style="font-size:8.5px;color:#c48b8b;line-height:1.5;font-style:italic;">Священный символ Актазиона — найден в обломках того корабля. Единственное что у неё было.</div>
   </div>
-  <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:6px;">
-    <div style="font-size:7.5px;color:#405060;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;font-family:Metamorphous,serif;">Слабость</div>
-    <div style="font-size:8.5px;color:#7890a8;line-height:1.5;font-style:italic;">Не переносит несправедливость — даже когда вмешательство опасно. Особенно тогда.</div>
+  <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:6px;">
+    <div style="font-size:7.5px;color:#70484d;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;font-family:Metamorphous,serif;">Слабость</div>
+    <div style="font-size:8.5px;color:#c48b8b;line-height:1.5;font-style:italic;">Не переносит несправедливость — даже когда вмешательство опасно. Особенно тогда.</div>
   </div>
 </div>
 
 <!-- ЗАМЕТКИ -->
-<div style="padding:6px 10px 14px;border-top:1px solid #283050;">
-  <div style="font-family:Metamorphous,serif;font-size:8px;color:#8ab0f0;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #283050;padding-bottom:2px;margin-bottom:6px;">Заметки</div>
+<div style="padding:6px 10px 14px;border-top:1px solid #542026;">
+  <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #542026;padding-bottom:2px;margin-bottom:6px;">Заметки</div>
   <textarea placeholder="Записывай сюда квесты, NPC, долги, улики..."></textarea>
 </div>
 
@@ -565,187 +628,187 @@ textarea::placeholder { color:#405060; }
 <div id="panel-spells" class="tab-panel" style="display:none;">
 <div class="page" style="position:relative;">
 
-<div style="text-align:center;padding:14px;border-bottom:2px solid #283050;background:#141822;">
-  <div style="font-family:Metamorphous,serif;font-size:20px;color:#c0ccd8;letter-spacing:2px;background:linear-gradient(90deg,#e8c040,#ffffff,#8ab0f0,#e8c040);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 4s linear infinite;">Луна — Шпаргалка заклинаний</div>
-  <div style="font-size:10px;color:#7890a8;margin-top:4px;">Жрец 4 · Домен Бури · Актазион · СС 13 · Бонус атаки +5 · Мудрость +3</div>
+<div style="text-align:center;padding:14px;border-bottom:2px solid #542026;background:#1d0b10;">
+  <div style="font-family:Metamorphous,serif;font-size:20px;color:#f4d7d7;letter-spacing:2px;background:linear-gradient(90deg,#ff4f45,#ffffff,#ff6b5f,#ff4f45);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 4s linear infinite;">Луна — Шпаргалка заклинаний</div>
+  <div style="font-size:10px;color:#c48b8b;margin-top:4px;">Жрец 4 · Домен Бури · Актазион · СС 13 · Бонус атаки +5 · Мудрость +3</div>
 </div>
 <div class="lightning-bar"></div>
 
 <!-- ЯЧЕЙКИ -->
-<div style="font-family:Metamorphous,serif;font-size:9.5px;color:#8ab0f0;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid #283050;padding:5px 12px 3px;margin:8px 0 6px;">Ячейки заклинаний</div>
+<div style="font-family:Metamorphous,serif;font-size:9.5px;color:#ff6b5f;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid #542026;padding:5px 12px 3px;margin:8px 0 6px;">Ячейки заклинаний</div>
 <div style="display:flex;gap:6px;align-items:center;padding:4px 12px 6px;flex-wrap:wrap;">
-  <span style="font-size:9px;color:#7890a8;">1 уровень:</span>
+  <span style="font-size:9px;color:#c48b8b;">1 уровень:</span>
   <div class="slot">I</div><div class="slot">I</div><div class="slot">I</div><div class="slot">I</div>
-  <span style="font-size:9px;color:#7890a8;margin-left:10px;">2 уровень:</span>
+  <span style="font-size:9px;color:#c48b8b;margin-left:10px;">2 уровень:</span>
   <div class="slot slot-new">II</div><div class="slot slot-new">II</div><div class="slot slot-new">II</div>
-  <span style="font-size:9px;color:#405060;margin-left:6px;">→ Восстанавливаются после длинного отдыха</span>
+  <span style="font-size:9px;color:#70484d;margin-left:6px;">→ Восстанавливаются после длинного отдыха</span>
 </div>
 
 <!-- ПРОВЕДЕНИЕ ЭНЕРГИИ -->
-<div style="font-family:Metamorphous,serif;font-size:9.5px;color:#8ab0f0;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid #283050;padding:5px 12px 3px;margin:6px 0 6px;">Проведение энергии — 1× до короткого или длинного отдыха</div>
+<div style="font-family:Metamorphous,serif;font-size:9.5px;color:#ff6b5f;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid #542026;padding:5px 12px 3px;margin:6px 0 6px;">Проведение энергии — 1× до короткого или длинного отдыха</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 12px;margin-bottom:8px;">
 
-  <div class="scard-anim" style="background:rgba(90,127,200,0.08);border:0.5px solid #283050;border-radius:5px;padding:9px 11px;">
+  <div class="scard-anim" style="background:rgba(183,53,53,0.08);border:0.5px solid #542026;border-radius:5px;padding:9px 11px;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;gap:8px;">
-      <div style="font-family:Metamorphous,serif;font-size:13px;color:#c0ccd8;">⚡ Разрушительный гнев</div>
-      <span style="font-size:8px;padding:2px 8px;border-radius:3px;border:0.5px solid #e8c040;background:rgba(232,192,64,0.15);color:#e8c040;white-space:nowrap;flex-shrink:0;">Домен Бури</span>
+      <div style="font-family:Metamorphous,serif;font-size:13px;color:#f4d7d7;">⚡ Разрушительный гнев</div>
+      <span style="font-size:8px;padding:2px 8px;border-radius:3px;border:0.5px solid #ff4f45;background:rgba(255,79,69,0.15);color:#ff4f45;white-space:nowrap;flex-shrink:0;">Домен Бури</span>
     </div>
-    <div style="font-size:9.5px;color:#7890a8;line-height:1.65;font-style:italic;">Когда бросаешь урон <strong style="font-style:normal;color:#d8e8f8;">молнией или громом</strong> — используй Проведение энергии чтобы <span style="font-style:normal;font-weight:bold;color:#e8c040;text-decoration:underline;text-decoration-color:#e8c040;">нанести максимальный урон</span> вместо броска.</div>
-    <div style="background:rgba(40,100,60,0.12);border-left:2px solid #2a6040;padding:5px 8px;margin-top:6px;border-radius:0 3px 3px 0;">
-      <div style="font-size:9px;color:#60c090;">✓ Удар молнией 3d10 → максимум 30 урона вместо броска! Используй на боссах.</div>
+    <div style="font-size:9.5px;color:#c48b8b;line-height:1.65;font-style:italic;">Когда бросаешь урон <strong style="font-style:normal;color:#f8e8e8;">молнией или громом</strong> — используй Проведение энергии чтобы <span style="font-style:normal;font-weight:bold;color:#ff4f45;text-decoration:underline;text-decoration-color:#ff4f45;">нанести максимальный урон</span> вместо броска.</div>
+    <div style="background:rgba(97,35,39,0.12);border-left:2px solid #612327;padding:5px 8px;margin-top:6px;border-radius:0 3px 3px 0;">
+      <div style="font-size:9px;color:#ff9286;">✓ Удар молнией 3d10 → максимум 30 урона вместо броска! Используй на боссах.</div>
     </div>
   </div>
 
-  <div class="scard-anim" style="background:rgba(90,127,200,0.08);border:0.5px solid #283050;border-radius:5px;padding:9px 11px;">
+  <div class="scard-anim" style="background:rgba(183,53,53,0.08);border:0.5px solid #542026;border-radius:5px;padding:9px 11px;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;gap:8px;">
-      <div style="font-family:Metamorphous,serif;font-size:13px;color:#c0ccd8;">✝ Изгнание нежити</div>
-      <span style="font-size:8px;padding:2px 8px;border-radius:3px;border:0.5px solid #283050;background:rgba(90,127,200,0.15);color:#8ab0f0;white-space:nowrap;flex-shrink:0;">Базовое</span>
+      <div style="font-family:Metamorphous,serif;font-size:13px;color:#f4d7d7;">✝ Изгнание нежити</div>
+      <span style="font-size:8px;padding:2px 8px;border-radius:3px;border:0.5px solid #542026;background:rgba(183,53,53,0.15);color:#ff6b5f;white-space:nowrap;flex-shrink:0;">Базовое</span>
     </div>
-    <div style="font-size:9.5px;color:#7890a8;line-height:1.65;font-style:italic;">Каждая нежить в пределах 30 фт, которую ты видишь, совершает <strong style="font-style:normal;">спасбросок Мудрости СС 13</strong>. При провале — <span style="font-style:normal;font-weight:bold;color:#8ab0f0;">изгнана на 1 минуту</span> (не может приближаться, атаковать).</div>
-    <div style="background:rgba(40,100,60,0.12);border-left:2px solid #2a6040;padding:5px 8px;margin-top:6px;border-radius:0 3px 3px 0;">
-      <div style="font-size:9px;color:#60c090;">✓ Бьёт ВСЕХ нежитей сразу в радиусе. Против орды зомби — одно действие выключает толпу.</div>
+    <div style="font-size:9.5px;color:#c48b8b;line-height:1.65;font-style:italic;">Каждая нежить в пределах 30 фт, которую ты видишь, совершает <strong style="font-style:normal;">спасбросок Мудрости СС 13</strong>. При провале — <span style="font-style:normal;font-weight:bold;color:#ff6b5f;">изгнана на 1 минуту</span> (не может приближаться, атаковать).</div>
+    <div style="background:rgba(97,35,39,0.12);border-left:2px solid #612327;padding:5px 8px;margin-top:6px;border-radius:0 3px 3px 0;">
+      <div style="font-size:9px;color:#ff9286;">✓ Бьёт ВСЕХ нежитей сразу в радиусе. Против орды зомби — одно действие выключает толпу.</div>
     </div>
   </div>
 </div>
 
 <!-- КАРАЮЩИЙ УДАР ГРОМА -->
-<div style="font-family:Metamorphous,serif;font-size:9.5px;color:#8ab0f0;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid #283050;padding:5px 12px 3px;margin:6px 0 6px;">Карающий удар грома — пассивное умение домена</div>
+<div style="font-family:Metamorphous,serif;font-size:9.5px;color:#ff6b5f;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid #542026;padding:5px 12px 3px;margin:6px 0 6px;">Карающий удар грома — пассивное умение домена</div>
 <div style="padding:0 12px;margin-bottom:8px;">
-  <div class="scard-anim" style="background:rgba(232,192,64,0.06);border:1px solid rgba(232,192,64,0.3);border-radius:5px;padding:9px 11px;">
+  <div class="scard-anim" style="background:rgba(255,79,69,0.06);border:1px solid rgba(255,79,69,0.3);border-radius:5px;padding:9px 11px;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;">
-      <div style="font-family:Metamorphous,serif;font-size:13px;color:#e8c040;">🌩 Карающий удар грома</div>
-      <span style="font-size:8px;padding:2px 8px;border-radius:3px;border:0.5px solid #e8c040;background:rgba(232,192,64,0.15);color:#e8c040;white-space:nowrap;">Реакция · пассивно</span>
+      <div style="font-family:Metamorphous,serif;font-size:13px;color:#ff4f45;">🌩 Карающий удар грома</div>
+      <span style="font-size:8px;padding:2px 8px;border-radius:3px;border:0.5px solid #ff4f45;background:rgba(255,79,69,0.15);color:#ff4f45;white-space:nowrap;">Реакция · пассивно</span>
     </div>
-    <div style="font-size:9.5px;color:#7890a8;line-height:1.65;font-style:italic;">Когда существо в 5 фт попадает по тебе атакой — ты <strong style="font-style:normal;">реакцией</strong> заставляешь его пройти <span style="font-style:normal;font-weight:bold;color:#e8c040;">спасбросок Ловкости СС 13</span>. При провале: <span style="font-style:normal;font-weight:bold;color:#e8c040;">2d8 урона громом или молнией</span> (на выбор). При успехе: половина.</div>
-    <div style="background:rgba(40,100,60,0.12);border-left:2px solid #2a6040;padding:5px 8px;margin-top:6px;border-radius:0 3px 3px 0;">
-      <div style="font-size:9px;color:#60c090;">✓ Враг ударил тебя — ты отвечаешь громом. Бесплатно, каждый раз. Отличный щит для ближнего боя!</div>
+    <div style="font-size:9.5px;color:#c48b8b;line-height:1.65;font-style:italic;">Когда существо в 5 фт попадает по тебе атакой — ты <strong style="font-style:normal;">реакцией</strong> заставляешь его пройти <span style="font-style:normal;font-weight:bold;color:#ff4f45;">спасбросок Ловкости СС 13</span>. При провале: <span style="font-style:normal;font-weight:bold;color:#ff4f45;">2d8 урона громом или молнией</span> (на выбор). При успехе: половина.</div>
+    <div style="background:rgba(97,35,39,0.12);border-left:2px solid #612327;padding:5px 8px;margin-top:6px;border-radius:0 3px 3px 0;">
+      <div style="font-size:9px;color:#ff9286;">✓ Враг ударил тебя — ты отвечаешь громом. Бесплатно, каждый раз. Отличный щит для ближнего боя!</div>
     </div>
-    <div style="background:rgba(100,40,0,0.08);border-left:2px solid #8b3020;padding:5px 8px;margin-top:5px;border-radius:0 3px 3px 0;">
-      <div style="font-size:9px;color:#e09080;">⚠ Только против существ в 5 фт — не работает против стрел и заклинаний!</div>
+    <div style="background:rgba(126,36,31,0.08);border-left:2px solid #7e241f;padding:5px 8px;margin-top:5px;border-radius:0 3px 3px 0;">
+      <div style="font-size:9px;color:#ffaaa0;">⚠ Только против существ в 5 фт — не работает против стрел и заклинаний!</div>
     </div>
   </div>
 </div>
 
 <!-- ЗАКЛИНАНИЯ ДОМЕНА -->
-<div style="font-family:Metamorphous,serif;font-size:9.5px;color:#8ab0f0;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid #283050;padding:5px 12px 3px;margin:6px 0 6px;">Заклинания домена — всегда подготовлены, не входят в лимит</div>
+<div style="font-family:Metamorphous,serif;font-size:9.5px;color:#ff6b5f;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid #542026;padding:5px 12px 3px;margin:6px 0 6px;">Заклинания домена — всегда подготовлены, не входят в лимит</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 12px;margin-bottom:8px;">
 
-  <div class="scard-anim" style="background:rgba(90,127,200,0.08);border:0.5px solid #283050;border-radius:5px;padding:9px 11px;">
+  <div class="scard-anim" style="background:rgba(183,53,53,0.08);border:0.5px solid #542026;border-radius:5px;padding:9px 11px;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:5px;">
-      <div><div style="font-family:Metamorphous,serif;font-size:12px;color:#c0ccd8;">🌫 Туманное облако</div><div style="font-size:8.5px;color:#7890a8;font-style:italic;">Fog Cloud</div></div>
-      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #283050;background:rgba(90,127,200,0.15);color:#8ab0f0;white-space:nowrap;flex-shrink:0;">1 ур. · Конц.</span>
+      <div><div style="font-family:Metamorphous,serif;font-size:12px;color:#f4d7d7;">🌫 Туманное облако</div><div style="font-size:8.5px;color:#c48b8b;font-style:italic;">Fog Cloud</div></div>
+      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #542026;background:rgba(183,53,53,0.15);color:#ff6b5f;white-space:nowrap;flex-shrink:0;">1 ур. · Конц.</span>
     </div>
     <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px;">
-      <span style="background:rgba(90,127,200,0.12);border:0.5px solid #283050;border-radius:3px;padding:2px 5px;font-size:8px;color:#7890a8;">Радиус: <span style="color:#c0ccd8;font-weight:bold;">20 фт сфера</span></span>
-      <span style="background:rgba(90,127,200,0.12);border:0.5px solid #283050;border-radius:3px;padding:2px 5px;font-size:8px;color:#7890a8;">Длит.: <span style="color:#c0ccd8;font-weight:bold;">Конц. 1 час</span></span>
+      <span style="background:rgba(183,53,53,0.12);border:0.5px solid #542026;border-radius:3px;padding:2px 5px;font-size:8px;color:#c48b8b;">Радиус: <span style="color:#f4d7d7;font-weight:bold;">20 фт сфера</span></span>
+      <span style="background:rgba(183,53,53,0.12);border:0.5px solid #542026;border-radius:3px;padding:2px 5px;font-size:8px;color:#c48b8b;">Длит.: <span style="color:#f4d7d7;font-weight:bold;">Конц. 1 час</span></span>
     </div>
-    <div style="font-size:9.5px;color:#7890a8;line-height:1.65;font-style:italic;">Создаёт <span style="font-style:normal;font-weight:bold;color:#8ab0f0;">сферу тумана радиусом 20 фт</span>. Сильно заслонённая местность — атаки внутри с помехой для обеих сторон.</div>
-    <div style="background:rgba(40,100,60,0.12);border-left:2px solid #2a6040;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#60c090;">✓ Прячься сама, скрывай союзников. Лучник не попадёт что сквозь туман!</div></div>
+    <div style="font-size:9.5px;color:#c48b8b;line-height:1.65;font-style:italic;">Создаёт <span style="font-style:normal;font-weight:bold;color:#ff6b5f;">сферу тумана радиусом 20 фт</span>. Сильно заслонённая местность — атаки внутри с помехой для обеих сторон.</div>
+    <div style="background:rgba(97,35,39,0.12);border-left:2px solid #612327;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#ff9286;">✓ Прячься сама, скрывай союзников. Лучник не попадёт что сквозь туман!</div></div>
   </div>
 
-  <div class="scard-anim" style="background:rgba(90,127,200,0.08);border:0.5px solid #283050;border-radius:5px;padding:9px 11px;">
+  <div class="scard-anim" style="background:rgba(183,53,53,0.08);border:0.5px solid #542026;border-radius:5px;padding:9px 11px;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:5px;">
-      <div><div style="font-family:Metamorphous,serif;font-size:12px;color:#c0ccd8;">⚡ Громовая волна</div><div style="font-size:8.5px;color:#7890a8;font-style:italic;">Thunderwave</div></div>
-      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #283050;background:rgba(90,127,200,0.15);color:#8ab0f0;white-space:nowrap;flex-shrink:0;">1 ур.</span>
+      <div><div style="font-family:Metamorphous,serif;font-size:12px;color:#f4d7d7;">⚡ Громовая волна</div><div style="font-size:8.5px;color:#c48b8b;font-style:italic;">Thunderwave</div></div>
+      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #542026;background:rgba(183,53,53,0.15);color:#ff6b5f;white-space:nowrap;flex-shrink:0;">1 ур.</span>
     </div>
     <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px;">
-      <span style="background:rgba(90,127,200,0.12);border:0.5px solid #283050;border-radius:3px;padding:2px 5px;font-size:8px;color:#7890a8;">Куб: <span style="color:#c0ccd8;font-weight:bold;">15 фт от тебя</span></span>
-      <span style="background:rgba(90,127,200,0.12);border:0.5px solid #283050;border-radius:3px;padding:2px 5px;font-size:8px;color:#7890a8;">Урон: <span style="color:#c0ccd8;font-weight:bold;">2d8 гром</span></span>
-      <span style="background:rgba(90,127,200,0.12);border:0.5px solid #283050;border-radius:3px;padding:2px 5px;font-size:8px;color:#7890a8;">Спас.: <span style="color:#c0ccd8;font-weight:bold;">Тел СС 13</span></span>
+      <span style="background:rgba(183,53,53,0.12);border:0.5px solid #542026;border-radius:3px;padding:2px 5px;font-size:8px;color:#c48b8b;">Куб: <span style="color:#f4d7d7;font-weight:bold;">15 фт от тебя</span></span>
+      <span style="background:rgba(183,53,53,0.12);border:0.5px solid #542026;border-radius:3px;padding:2px 5px;font-size:8px;color:#c48b8b;">Урон: <span style="color:#f4d7d7;font-weight:bold;">2d8 гром</span></span>
+      <span style="background:rgba(183,53,53,0.12);border:0.5px solid #542026;border-radius:3px;padding:2px 5px;font-size:8px;color:#c48b8b;">Спас.: <span style="color:#f4d7d7;font-weight:bold;">Тел СС 13</span></span>
     </div>
-    <div style="font-size:9.5px;color:#7890a8;line-height:1.65;font-style:italic;">При провале — 2d8 грома и отталкивает на 10 фт. При успехе — половина урона, не отталкивает. Громкий звук — слышен за 300 фт.</div>
-    <div style="background:rgba(40,100,60,0.12);border-left:2px solid #2a6040;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#60c090;">✓ Отталкивает всех врагов вокруг тебя. Идеально когда тебя окружили!</div></div>
-    <div style="background:rgba(100,40,0,0.08);border-left:2px solid #8b3020;padding:4px 7px;margin-top:4px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#e09080;">⚠ Громкий — весь данж тебя услышит!</div></div>
+    <div style="font-size:9.5px;color:#c48b8b;line-height:1.65;font-style:italic;">При провале — 2d8 грома и отталкивает на 10 фт. При успехе — половина урона, не отталкивает. Громкий звук — слышен за 300 фт.</div>
+    <div style="background:rgba(97,35,39,0.12);border-left:2px solid #612327;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#ff9286;">✓ Отталкивает всех врагов вокруг тебя. Идеально когда тебя окружили!</div></div>
+    <div style="background:rgba(126,36,31,0.08);border-left:2px solid #7e241f;padding:4px 7px;margin-top:4px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#ffaaa0;">⚠ Громкий — весь данж тебя услышит!</div></div>
   </div>
 
-  <div class="scard-anim" style="background:rgba(90,127,200,0.08);border:0.5px solid #283050;border-radius:5px;padding:9px 11px;">
+  <div class="scard-anim" style="background:rgba(183,53,53,0.08);border:0.5px solid #542026;border-radius:5px;padding:9px 11px;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:5px;">
-      <div><div style="font-family:Metamorphous,serif;font-size:12px;color:#c0ccd8;">💥 Разрыв</div><div style="font-size:8.5px;color:#7890a8;font-style:italic;">Shatter</div></div>
-      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #283050;background:rgba(90,127,200,0.15);color:#8ab0f0;white-space:nowrap;flex-shrink:0;">2 ур.</span>
+      <div><div style="font-family:Metamorphous,serif;font-size:12px;color:#f4d7d7;">💥 Разрыв</div><div style="font-size:8.5px;color:#c48b8b;font-style:italic;">Shatter</div></div>
+      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #542026;background:rgba(183,53,53,0.15);color:#ff6b5f;white-space:nowrap;flex-shrink:0;">2 ур.</span>
     </div>
     <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px;">
-      <span style="background:rgba(90,127,200,0.12);border:0.5px solid #283050;border-radius:3px;padding:2px 5px;font-size:8px;color:#7890a8;">Дист.: <span style="color:#c0ccd8;font-weight:bold;">60 фт</span></span>
-      <span style="background:rgba(90,127,200,0.12);border:0.5px solid #283050;border-radius:3px;padding:2px 5px;font-size:8px;color:#7890a8;">Сфера: <span style="color:#c0ccd8;font-weight:bold;">10 фт</span></span>
-      <span style="background:rgba(90,127,200,0.12);border:0.5px solid #283050;border-radius:3px;padding:2px 5px;font-size:8px;color:#7890a8;">Урон: <span style="color:#c0ccd8;font-weight:bold;">3d8 гром</span></span>
+      <span style="background:rgba(183,53,53,0.12);border:0.5px solid #542026;border-radius:3px;padding:2px 5px;font-size:8px;color:#c48b8b;">Дист.: <span style="color:#f4d7d7;font-weight:bold;">60 фт</span></span>
+      <span style="background:rgba(183,53,53,0.12);border:0.5px solid #542026;border-radius:3px;padding:2px 5px;font-size:8px;color:#c48b8b;">Сфера: <span style="color:#f4d7d7;font-weight:bold;">10 фт</span></span>
+      <span style="background:rgba(183,53,53,0.12);border:0.5px solid #542026;border-radius:3px;padding:2px 5px;font-size:8px;color:#c48b8b;">Урон: <span style="color:#f4d7d7;font-weight:bold;">3d8 гром</span></span>
     </div>
-    <div style="font-size:9.5px;color:#7890a8;line-height:1.65;font-style:italic;">Все в сфере 10 фт — спасбросок Телосложения СС 13. Провал — 3d8 грома. Неорганические существа (конструкты, земляные элементали) — помеха на спасбросок!</div>
-    <div style="background:rgba(40,100,60,0.12);border-left:2px solid #2a6040;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#60c090;">✓ Дистанционное АОЕ. Лучше Громовой волны когда не хочешь лезть в ближний бой!</div></div>
+    <div style="font-size:9.5px;color:#c48b8b;line-height:1.65;font-style:italic;">Все в сфере 10 фт — спасбросок Телосложения СС 13. Провал — 3d8 грома. Неорганические существа (конструкты, земляные элементали) — помеха на спасбросок!</div>
+    <div style="background:rgba(97,35,39,0.12);border-left:2px solid #612327;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#ff9286;">✓ Дистанционное АОЕ. Лучше Громовой волны когда не хочешь лезть в ближний бой!</div></div>
   </div>
 
-  <div class="scard-anim" style="background:rgba(90,127,200,0.08);border:0.5px solid #283050;border-radius:5px;padding:9px 11px;">
+  <div class="scard-anim" style="background:rgba(183,53,53,0.08);border:0.5px solid #542026;border-radius:5px;padding:9px 11px;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:5px;">
-      <div><div style="font-family:Metamorphous,serif;font-size:12px;color:#c0ccd8;">🌪 Раскаты грома</div><div style="font-size:8.5px;color:#7890a8;font-style:italic;">Gust of Wind</div></div>
-      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #283050;background:rgba(90,127,200,0.15);color:#8ab0f0;white-space:nowrap;flex-shrink:0;">2 ур. · Конц.</span>
+      <div><div style="font-family:Metamorphous,serif;font-size:12px;color:#f4d7d7;">🌪 Раскаты грома</div><div style="font-size:8.5px;color:#c48b8b;font-style:italic;">Gust of Wind</div></div>
+      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #542026;background:rgba(183,53,53,0.15);color:#ff6b5f;white-space:nowrap;flex-shrink:0;">2 ур. · Конц.</span>
     </div>
     <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px;">
-      <span style="background:rgba(90,127,200,0.12);border:0.5px solid #283050;border-radius:3px;padding:2px 5px;font-size:8px;color:#7890a8;">Линия: <span style="color:#c0ccd8;font-weight:bold;">60×10 фт</span></span>
-      <span style="background:rgba(90,127,200,0.12);border:0.5px solid #283050;border-radius:3px;padding:2px 5px;font-size:8px;color:#7890a8;">Длит.: <span style="color:#c0ccd8;font-weight:bold;">Конц. 1 мин.</span></span>
+      <span style="background:rgba(183,53,53,0.12);border:0.5px solid #542026;border-radius:3px;padding:2px 5px;font-size:8px;color:#c48b8b;">Линия: <span style="color:#f4d7d7;font-weight:bold;">60×10 фт</span></span>
+      <span style="background:rgba(183,53,53,0.12);border:0.5px solid #542026;border-radius:3px;padding:2px 5px;font-size:8px;color:#c48b8b;">Длит.: <span style="color:#f4d7d7;font-weight:bold;">Конц. 1 мин.</span></span>
     </div>
-    <div style="font-size:9.5px;color:#7890a8;line-height:1.65;font-style:italic;">Линия 60×10 фт — сильный ветер. Существа входящие — спасбросок Силы СС 13 или отброс 15 фт. Каждый раунд бонусным — направляй линию.</div>
-    <div style="background:rgba(40,100,60,0.12);border-left:2px solid #2a6040;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#60c090;">✓ Контроль пространства — держи врагов на дистанции. Стрельба против ветра — с помехой!</div></div>
+    <div style="font-size:9.5px;color:#c48b8b;line-height:1.65;font-style:italic;">Линия 60×10 фт — сильный ветер. Существа входящие — спасбросок Силы СС 13 или отброс 15 фт. Каждый раунд бонусным — направляй линию.</div>
+    <div style="background:rgba(97,35,39,0.12);border-left:2px solid #612327;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#ff9286;">✓ Контроль пространства — держи врагов на дистанции. Стрельба против ветра — с помехой!</div></div>
   </div>
 
 </div>
 
 <!-- ЗАГОВОРЫ И ПОДГОТОВЛЕННЫЕ -->
-<div style="font-family:Metamorphous,serif;font-size:9.5px;color:#8ab0f0;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid #283050;padding:5px 12px 3px;margin:6px 0 6px;">Заговоры (∞) и подготовленные заклинания</div>
+<div style="font-family:Metamorphous,serif;font-size:9.5px;color:#ff6b5f;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid #542026;padding:5px 12px 3px;margin:6px 0 6px;">Заговоры (∞) и подготовленные заклинания</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 12px;margin-bottom:8px;">
 
-  <div class="scard-anim" style="background:rgba(90,127,200,0.08);border:0.5px solid #283050;border-radius:5px;padding:9px 11px;">
+  <div class="scard-anim" style="background:rgba(183,53,53,0.08);border:0.5px solid #542026;border-radius:5px;padding:9px 11px;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:5px;">
-      <div style="font-family:Metamorphous,serif;font-size:12px;color:#c0ccd8;">🔥 Священное пламя</div>
-      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #283050;background:rgba(90,127,200,0.15);color:#8ab0f0;white-space:nowrap;flex-shrink:0;">Заговор · ∞</span>
+      <div style="font-family:Metamorphous,serif;font-size:12px;color:#f4d7d7;">🔥 Священное пламя</div>
+      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #542026;background:rgba(183,53,53,0.15);color:#ff6b5f;white-space:nowrap;flex-shrink:0;">Заговор · ∞</span>
     </div>
-    <div style="font-size:9.5px;color:#7890a8;line-height:1.65;font-style:italic;">Дистанция 60 фт. Цель — спасбросок Ловкости СС 13. При провале — <span style="font-style:normal;font-weight:bold;color:#e8c040;">1d8 урона огнём</span>. Укрытие не даёт бонуса к спасброску!</div>
-    <div style="background:rgba(40,100,60,0.12);border-left:2px solid #2a6040;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#60c090;">✓ Лучший боевой заговор жреца. Игнорирует укрытие — стреляй через щиты!</div></div>
+    <div style="font-size:9.5px;color:#c48b8b;line-height:1.65;font-style:italic;">Дистанция 60 фт. Цель — спасбросок Ловкости СС 13. При провале — <span style="font-style:normal;font-weight:bold;color:#ff4f45;">1d8 урона огнём</span>. Укрытие не даёт бонуса к спасброску!</div>
+    <div style="background:rgba(97,35,39,0.12);border-left:2px solid #612327;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#ff9286;">✓ Лучший боевой заговор жреца. Игнорирует укрытие — стреляй через щиты!</div></div>
   </div>
 
-  <div class="scard-anim" style="background:rgba(90,127,200,0.08);border:0.5px solid #283050;border-radius:5px;padding:9px 11px;">
+  <div class="scard-anim" style="background:rgba(183,53,53,0.08);border:0.5px solid #542026;border-radius:5px;padding:9px 11px;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:5px;">
-      <div style="font-family:Metamorphous,serif;font-size:12px;color:#c0ccd8;">⚡ Удар молнией</div>
-      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #e8c040;background:rgba(232,192,64,0.1);color:#e8c040;white-space:nowrap;flex-shrink:0;">1 ур. · МОЩНОЕ</span>
+      <div style="font-family:Metamorphous,serif;font-size:12px;color:#f4d7d7;">⚡ Удар молнией</div>
+      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #ff4f45;background:rgba(255,79,69,0.1);color:#ff4f45;white-space:nowrap;flex-shrink:0;">1 ур. · МОЩНОЕ</span>
     </div>
-    <div style="font-size:9.5px;color:#7890a8;line-height:1.65;font-style:italic;">Дистанционная атака заклинанием (+5). При попадании — <span style="font-style:normal;font-weight:bold;color:#e8c040;">3d10 урона молнией</span>, 60 фт.</div>
-    <div style="background:rgba(40,100,60,0.12);border-left:2px solid #2a6040;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#60c090;">✓ КОМБО: Удар молнией → Разрушительный гнев → 30 урона молнией гарантированно!</div></div>
+    <div style="font-size:9.5px;color:#c48b8b;line-height:1.65;font-style:italic;">Дистанционная атака заклинанием (+5). При попадании — <span style="font-style:normal;font-weight:bold;color:#ff4f45;">3d10 урона молнией</span>, 60 фт.</div>
+    <div style="background:rgba(97,35,39,0.12);border-left:2px solid #612327;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#ff9286;">✓ КОМБО: Удар молнией → Разрушительный гнев → 30 урона молнией гарантированно!</div></div>
   </div>
 
-  <div class="scard-anim" style="background:rgba(90,127,200,0.08);border:0.5px solid #283050;border-radius:5px;padding:9px 11px;">
+  <div class="scard-anim" style="background:rgba(183,53,53,0.08);border:0.5px solid #542026;border-radius:5px;padding:9px 11px;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:5px;">
-      <div style="font-family:Metamorphous,serif;font-size:12px;color:#c0ccd8;">💚 Лечение ран</div>
-      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #283050;background:rgba(90,127,200,0.15);color:#8ab0f0;white-space:nowrap;flex-shrink:0;">1 ур.</span>
+      <div style="font-family:Metamorphous,serif;font-size:12px;color:#f4d7d7;">💚 Лечение ран</div>
+      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #542026;background:rgba(183,53,53,0.15);color:#ff6b5f;white-space:nowrap;flex-shrink:0;">1 ур.</span>
     </div>
-    <div style="font-size:9.5px;color:#7890a8;line-height:1.65;font-style:italic;">Прикосновение. Существо восстанавливает <span style="font-style:normal;font-weight:bold;color:#8ab0f0;">1d8 + 3 хитов</span>. На 2-й ячейке: 2d8+3. На 3-й: 3d8+3.</div>
+    <div style="font-size:9.5px;color:#c48b8b;line-height:1.65;font-style:italic;">Прикосновение. Существо восстанавливает <span style="font-style:normal;font-weight:bold;color:#ff6b5f;">1d8 + 3 хитов</span>. На 2-й ячейке: 2d8+3. На 3-й: 3d8+3.</div>
   </div>
 
-  <div class="scard-anim" style="background:rgba(90,127,200,0.08);border:0.5px solid #283050;border-radius:5px;padding:9px 11px;">
+  <div class="scard-anim" style="background:rgba(183,53,53,0.08);border:0.5px solid #542026;border-radius:5px;padding:9px 11px;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:5px;">
-      <div style="font-family:Metamorphous,serif;font-size:12px;color:#c0ccd8;">🗡 Духовное оружие</div>
-      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #283050;background:rgba(90,127,200,0.15);color:#8ab0f0;white-space:nowrap;flex-shrink:0;">2 ур.</span>
+      <div style="font-family:Metamorphous,serif;font-size:12px;color:#f4d7d7;">🗡 Духовное оружие</div>
+      <span style="font-size:8px;padding:2px 7px;border-radius:3px;border:0.5px solid #542026;background:rgba(183,53,53,0.15);color:#ff6b5f;white-space:nowrap;flex-shrink:0;">2 ур.</span>
     </div>
-    <div style="font-size:9.5px;color:#7890a8;line-height:1.65;font-style:italic;">Создаёт <span style="font-style:normal;font-weight:bold;color:#8ab0f0;">силовое оружие</span> в 60 фт. Бонусным действием атаковать: +5 атака, <span style="font-style:normal;font-weight:bold;color:#8ab0f0;">1d8+3 силовой урон</span>. Длится 1 мин, без концентрации!</div>
-    <div style="background:rgba(40,100,60,0.12);border-left:2px solid #2a6040;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#60c090;">✓ Атака действием + Духовное оружие бонусным = два удара в ход. Без концентрации!</div></div>
+    <div style="font-size:9.5px;color:#c48b8b;line-height:1.65;font-style:italic;">Создаёт <span style="font-style:normal;font-weight:bold;color:#ff6b5f;">силовое оружие</span> в 60 фт. Бонусным действием атаковать: +5 атака, <span style="font-style:normal;font-weight:bold;color:#ff6b5f;">1d8+3 силовой урон</span>. Длится 1 мин, без концентрации!</div>
+    <div style="background:rgba(97,35,39,0.12);border-left:2px solid #612327;padding:4px 7px;margin-top:5px;border-radius:0 3px 3px 0;"><div style="font-size:9px;color:#ff9286;">✓ Атака действием + Духовное оружие бонусным = два удара в ход. Без концентрации!</div></div>
   </div>
 
 </div>
 
 <!-- СВОДКА -->
-<div style="font-family:Metamorphous,serif;font-size:9.5px;color:#8ab0f0;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid #283050;padding:5px 12px 3px;margin:6px 0 6px;">Быстрая сводка — что делать в бою</div>
+<div style="font-family:Metamorphous,serif;font-size:9.5px;color:#ff6b5f;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid #542026;padding:5px 12px 3px;margin:6px 0 6px;">Быстрая сводка — что делать в бою</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0 12px 14px;">
-  <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:7px 9px;">
-    <div style="font-family:Metamorphous,serif;font-size:9px;color:#c0ccd8;border-bottom:0.5px solid #283050;padding-bottom:3px;margin-bottom:4px;">Максимальный урон</div>
-    <div style="font-size:9px;color:#7890a8;line-height:1.6;">→ <span style="font-weight:bold;color:#e8c040;">Удар молнией</span> + <span style="font-weight:bold;color:#e8c040;">Разрушительный гнев</span> = 30 урона молнией гарантированно!</div>
+  <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:7px 9px;">
+    <div style="font-family:Metamorphous,serif;font-size:9px;color:#f4d7d7;border-bottom:0.5px solid #542026;padding-bottom:3px;margin-bottom:4px;">Максимальный урон</div>
+    <div style="font-size:9px;color:#c48b8b;line-height:1.6;">→ <span style="font-weight:bold;color:#ff4f45;">Удар молнией</span> + <span style="font-weight:bold;color:#ff4f45;">Разрушительный гнев</span> = 30 урона молнией гарантированно!</div>
   </div>
-  <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:7px 9px;">
-    <div style="font-family:Metamorphous,serif;font-size:9px;color:#c0ccd8;border-bottom:0.5px solid #283050;padding-bottom:3px;margin-bottom:4px;">Нас окружили</div>
-    <div style="font-size:9px;color:#7890a8;line-height:1.6;">→ <span style="font-weight:bold;color:#8ab0f0;">Громовая волна</span> — отбрасывает всех на 10 фт + 2d8 грома</div>
+  <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:7px 9px;">
+    <div style="font-family:Metamorphous,serif;font-size:9px;color:#f4d7d7;border-bottom:0.5px solid #542026;padding-bottom:3px;margin-bottom:4px;">Нас окружили</div>
+    <div style="font-size:9px;color:#c48b8b;line-height:1.6;">→ <span style="font-weight:bold;color:#ff6b5f;">Громовая волна</span> — отбрасывает всех на 10 фт + 2d8 грома</div>
   </div>
-  <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:7px 9px;">
-    <div style="font-family:Metamorphous,serif;font-size:9px;color:#c0ccd8;border-bottom:0.5px solid #283050;padding-bottom:3px;margin-bottom:4px;">Стандартный ход в бою</div>
-    <div style="font-size:9px;color:#7890a8;line-height:1.6;">→ Действие: <span style="font-weight:bold;color:#8ab0f0;">Священное пламя</span> или атака · Бонусное: <span style="font-weight:bold;color:#8ab0f0;">Духовное оружие</span></div>
+  <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:7px 9px;">
+    <div style="font-family:Metamorphous,serif;font-size:9px;color:#f4d7d7;border-bottom:0.5px solid #542026;padding-bottom:3px;margin-bottom:4px;">Стандартный ход в бою</div>
+    <div style="font-size:9px;color:#c48b8b;line-height:1.6;">→ Действие: <span style="font-weight:bold;color:#ff6b5f;">Священное пламя</span> или атака · Бонусное: <span style="font-weight:bold;color:#ff6b5f;">Духовное оружие</span></div>
   </div>
-  <div style="background:rgba(90,127,200,0.07);border:0.5px solid #283050;border-radius:4px;padding:7px 9px;">
-    <div style="font-family:Metamorphous,serif;font-size:9px;color:#c0ccd8;border-bottom:0.5px solid #283050;padding-bottom:3px;margin-bottom:4px;">По тебе попали в ближнем</div>
-    <div style="font-size:9px;color:#7890a8;line-height:1.6;">→ <span style="font-weight:bold;color:#e8c040;">Карающий удар грома</span> реакцией — 2d8 грома/молнии в ответ!</div>
+  <div style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:7px 9px;">
+    <div style="font-family:Metamorphous,serif;font-size:9px;color:#f4d7d7;border-bottom:0.5px solid #542026;padding-bottom:3px;margin-bottom:4px;">По тебе попали в ближнем</div>
+    <div style="font-size:9px;color:#c48b8b;line-height:1.6;">→ <span style="font-weight:bold;color:#ff4f45;">Карающий удар грома</span> реакцией — 2d8 грома/молнии в ответ!</div>
   </div>
 </div>
 
@@ -754,34 +817,34 @@ textarea::placeholder { color:#405060; }
 
 <!-- ══ ВКЛАДКА ИНВЕНТАРЬ ══ -->
 <div id="panel-inventory" class="tab-panel" style="display:none;">
-  <div style="background:#10121a;border:1px solid #283050;border-left:3px solid #5a7fc8;border-radius:8px;padding:20px 24px;box-shadow:0 8px 40px rgba(0,0,0,0.4);">
-    <div style="font-family:Metamorphous,serif;font-size:16px;color:#c0ccd8;border-bottom:1px solid #283050;padding-bottom:10px;margin-bottom:16px;letter-spacing:2px;">🎒 Инвентарь — Луна</div>
+  <div style="background:#16090c;border:1px solid #542026;border-left:3px solid #b73535;border-radius:8px;padding:20px 24px;box-shadow:0 8px 40px rgba(0,0,0,0.4);">
+    <div style="font-family:Metamorphous,serif;font-size:16px;color:#f4d7d7;border-bottom:1px solid #542026;padding-bottom:10px;margin-bottom:16px;letter-spacing:2px;">🎒 Инвентарь — Луна</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-      <div style="background:rgba(90,127,200,0.06);border:1px solid #283050;border-radius:6px;padding:14px 16px;">
-        <div style="font-family:Metamorphous,serif;font-size:10px;color:#8ab0f0;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #283050;padding-bottom:6px;margin-bottom:10px;">⚔ Оружие и доспехи</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(90,127,200,0.1);font-size:13px;color:#d8e8f8;">◆ Булава</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(90,127,200,0.1);font-size:13px;color:#d8e8f8;">◆ Кольчуга (КД 16)</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#d8e8f8;">◆ Щит (+2 КД)</div>
+      <div style="background:rgba(183,53,53,0.06);border:1px solid #542026;border-radius:6px;padding:14px 16px;">
+        <div style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #542026;padding-bottom:6px;margin-bottom:10px;">⚔ Оружие и доспехи</div>
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(183,53,53,0.1);font-size:13px;color:#f8e8e8;">◆ Булава</div>
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(183,53,53,0.1);font-size:13px;color:#f8e8e8;">◆ Кольчуга (КД 16)</div>
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#f8e8e8;">◆ Щит (+2 КД)</div>
       </div>
-      <div style="background:rgba(90,127,200,0.06);border:1px solid #283050;border-radius:6px;padding:14px 16px;">
-        <div style="font-family:Metamorphous,serif;font-size:10px;color:#8ab0f0;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #283050;padding-bottom:6px;margin-bottom:10px;">🔮 Магические и религиозные</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(90,127,200,0.1);font-size:13px;color:#d8e8f8;">◆ Священный символ Актазиона</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#d8e8f8;">◆ Молитвенник</div>
+      <div style="background:rgba(183,53,53,0.06);border:1px solid #542026;border-radius:6px;padding:14px 16px;">
+        <div style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #542026;padding-bottom:6px;margin-bottom:10px;">🔮 Магические и религиозные</div>
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(183,53,53,0.1);font-size:13px;color:#f8e8e8;">◆ Священный символ Актазиона</div>
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#f8e8e8;">◆ Молитвенник</div>
       </div>
-      <div style="background:rgba(90,127,200,0.06);border:1px solid #283050;border-radius:6px;padding:14px 16px;">
-        <div style="font-family:Metamorphous,serif;font-size:10px;color:#8ab0f0;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #283050;padding-bottom:6px;margin-bottom:10px;">🎒 Прочее</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(90,127,200,0.1);font-size:13px;color:#d8e8f8;">◆ Рюкзак священника</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(90,127,200,0.1);font-size:13px;color:#d8e8f8;">◆ Факелы × 5</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(90,127,200,0.1);font-size:13px;color:#d8e8f8;">◆ Фляга</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#d8e8f8;">◆ Пайки × 5</div>
+      <div style="background:rgba(183,53,53,0.06);border:1px solid #542026;border-radius:6px;padding:14px 16px;">
+        <div style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #542026;padding-bottom:6px;margin-bottom:10px;">🎒 Прочее</div>
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(183,53,53,0.1);font-size:13px;color:#f8e8e8;">◆ Рюкзак священника</div>
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(183,53,53,0.1);font-size:13px;color:#f8e8e8;">◆ Факелы × 5</div>
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(183,53,53,0.1);font-size:13px;color:#f8e8e8;">◆ Фляга</div>
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#f8e8e8;">◆ Пайки × 5</div>
       </div>
-      <div style="background:rgba(90,127,200,0.06);border:1px solid #283050;border-radius:6px;padding:14px 16px;">
-        <div style="font-family:Metamorphous,serif;font-size:10px;color:#8ab0f0;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #283050;padding-bottom:6px;margin-bottom:10px;">📝 Заметки</div>
+      <div style="background:rgba(183,53,53,0.06);border:1px solid #542026;border-radius:6px;padding:14px 16px;">
+        <div style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #542026;padding-bottom:6px;margin-bottom:10px;">📝 Заметки</div>
         <textarea placeholder="Записывай сюда квесты, NPC, долги..." style="height:100px;font-size:13px;padding:10px;"></textarea>
       </div>
     </div>
-    <div style="margin-top:16px;padding:12px 16px;background:rgba(90,127,200,0.08);border:1px solid #283050;border-radius:6px;text-align:center;">
-      <strong style="background:linear-gradient(90deg,#b8860b,#ffd700,#ffec6e,#ffd700,#b8860b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 2s linear infinite;font-size:18px;">💰 15 зм · 0 см</strong>
+    <div style="margin-top:16px;padding:12px 16px;background:rgba(183,53,53,0.08);border:1px solid #542026;border-radius:6px;text-align:center;">
+      <strong style="background:linear-gradient(90deg,#7e241f,#ff4f45,#ff9a8d,#ff4f45,#7e241f);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 2s linear infinite;font-size:18px;">💰 15 зм · 0 см</strong>
     </div>
   </div>
 </div><!-- END panel-inventory -->
@@ -793,17 +856,17 @@ textarea::placeholder { color:#405060; }
 function switchTab(name, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
   document.querySelectorAll('.tab-btn').forEach(b => {
-    b.style.color = '#405060';
+    b.style.color = '#70484d';
     b.style.background = 'transparent';
     b.style.borderColor = 'transparent';
     b.style.borderBottomColor = 'transparent';
   });
   document.getElementById('panel-' + name).style.display = 'block';
   if (btn) {
-    btn.style.color = '#8ab0f0';
-    btn.style.background = '#10121a';
-    btn.style.borderColor = '#283050';
-    btn.style.borderBottomColor = '#10121a';
+    btn.style.color = '#ff6b5f';
+    btn.style.background = '#16090c';
+    btn.style.borderColor = '#542026';
+    btn.style.borderBottomColor = '#16090c';
   }
 }
 
