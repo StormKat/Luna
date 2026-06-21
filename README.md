@@ -5,7 +5,7 @@
 ## Структура
 
 - `outputs/character-sheet.html` - сам лист персонажа.
-- `netlify/functions/` - загрузка и чтение портрета через Netlify Blobs.
+- `netlify/functions/` - загрузка портрета и синхронизация инвентаря через Netlify Blobs.
 - `netlify.toml` - Netlify публикует папку `outputs` и открывает лист с корня сайта.
 
 ## Деплой на новый GitHub/Netlify
@@ -18,7 +18,7 @@
 6. Publish directory должен быть `outputs`.
 7. В **Site configuration -> Environment variables** добавь:
    - Key: `PORTRAIT_UPLOAD_TOKEN`
-   - Value: пароль для загрузки портрета
+   - Value: пароль для загрузки портрета и сохранения инвентаря
 8. Сделай новый deploy.
 
-Портрет сохраняется в Netlify Blobs. Локальная копия в браузере используется только как запасной вариант.
+Портрет и инвентарь сохраняются в Netlify Blobs. Локальная копия в браузере используется только как запасной вариант.

@@ -233,6 +233,133 @@ body::after {
 .scard-anim:hover {
   box-shadow: 0 8px 32px rgba(183,53,53,0.36), 0 0 0 1px #b73535;
 }
+.inventory-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.inventory-password,
+.inventory-currency,
+.inventory-input {
+  background: rgba(10,4,6,0.48);
+  border: 1px solid #542026;
+  border-radius: 5px;
+  color: #f8e8e8;
+  font-family: 'Metamorphous', serif;
+  outline: none;
+}
+.inventory-password {
+  min-width: 230px;
+  flex: 1 1 230px;
+  padding: 8px 10px;
+  font-size: 11px;
+}
+.inventory-button {
+  background: linear-gradient(180deg, rgba(183,53,53,0.34), rgba(126,36,31,0.42));
+  border: 1px solid #b73535;
+  border-radius: 5px;
+  color: #ffe8e5;
+  cursor: pointer;
+  font-family: 'Metamorphous', serif;
+  font-size: 10px;
+  padding: 8px 11px;
+  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+.inventory-button:hover {
+  border-color: #ff6b5f;
+  box-shadow: 0 0 16px rgba(183,53,53,0.24);
+}
+.inventory-button:active {
+  transform: translateY(1px);
+}
+.inventory-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.inventory-card {
+  background: rgba(183,53,53,0.06);
+  border: 1px solid #542026;
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+.inventory-card-title {
+  align-items: center;
+  border-bottom: 1px solid #542026;
+  color: #ff6b5f;
+  display: flex;
+  font-size: 10px;
+  justify-content: space-between;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+}
+.inventory-items {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.inventory-row {
+  align-items: center;
+  border-bottom: 1px solid rgba(183,53,53,0.12);
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 58px 30px;
+  padding-bottom: 7px;
+}
+.inventory-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.inventory-input {
+  min-width: 0;
+  padding: 7px 8px;
+  font-size: 12px;
+}
+.inventory-qty {
+  text-align: center;
+}
+.inventory-remove {
+  align-items: center;
+  background: rgba(126,36,31,0.2);
+  border: 1px solid #542026;
+  border-radius: 5px;
+  color: #ffaaa0;
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+}
+.inventory-currency-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(183,53,53,0.08);
+  border: 1px solid #542026;
+  border-radius: 6px;
+}
+.inventory-currency {
+  padding: 7px 8px;
+  width: 82px;
+  text-align: center;
+}
+.inventory-status {
+  color: #c48b8b;
+  flex: 1 1 100%;
+  font-size: 10px;
+  min-height: 16px;
+  text-align: center;
+}
+.inventory-status.saved { color: #ff9286; }
+.inventory-status.error { color: #ffaaa0; }
 @media print {
   body { background:#090608; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   .page { border:none; margin-bottom:0; page-break-after:always; }
@@ -311,6 +438,12 @@ body::after {
   textarea {
     min-height:120px;
   }
+  .inventory-grid {
+    grid-template-columns:1fr !important;
+  }
+  .inventory-row {
+    grid-template-columns:1fr 52px 30px;
+  }
 }
 </style>
 </head>
@@ -362,9 +495,9 @@ body::after {
   <div style="position:absolute;bottom:0;left:0;right:0;padding:0 20px 16px;display:flex;align-items:flex-end;justify-content:space-between;">
     <div>
       <div style="font-family:Metamorphous,serif;font-size:30px;line-height:1.1;background:linear-gradient(90deg,#ff4f45,#ffffff,#ff6b5f,#ff4f45);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 4s linear infinite;">Луна</div>
-      <div style="font-size:12px;color:#ff6b5f;margin-top:4px;letter-spacing:0.5px;">Полуэльф · Жрец 4 (Домен Бури) · Нейтрально-злая</div>
+      <div style="font-size:12px;color:#ff6b5f;margin-top:4px;letter-spacing:0.5px;">Лунный эльф · Жрец 4 (Домен Бури) · Нейтрально-злая</div>
       <div style="display:grid;grid-template-columns:repeat(6,auto);gap:6px;margin-top:8px;width:fit-content;">
-        <div style="background:rgba(183,53,53,0.15);border:0.5px solid #542026;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#70484d;text-transform:uppercase;">Раса</div><div style="font-size:11px;font-weight:bold;color:#f8e8e8;">Полуэльф</div></div>
+        <div style="background:rgba(183,53,53,0.15);border:0.5px solid #542026;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#70484d;text-transform:uppercase;">Раса</div><div style="font-size:11px;font-weight:bold;color:#f8e8e8;">Лунный эльф</div></div>
         <div style="background:rgba(183,53,53,0.15);border:0.5px solid #542026;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#70484d;text-transform:uppercase;">Класс</div><div style="font-size:11px;font-weight:bold;color:#f8e8e8;">Жрец 4</div></div>
         <div style="background:rgba(183,53,53,0.15);border:0.5px solid #542026;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#70484d;text-transform:uppercase;">Опыт</div><div style="font-size:11px;font-weight:bold;color:#f8e8e8;">2700 / 6500</div></div>
         <div style="background:rgba(183,53,53,0.15);border:0.5px solid #542026;border-radius:3px;padding:3px 8px;text-align:center;backdrop-filter:blur(4px)"><div style="font-size:7px;color:#70484d;text-transform:uppercase;">Бог</div><div style="font-size:11px;font-weight:bold;color:#f8e8e8;">Актазион</div></div>
@@ -433,7 +566,7 @@ body::after {
       <div style="font-size:10px;font-weight:bold;background:linear-gradient(90deg,#ff6b5f,#ff4f45,#ff6b5f);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 3s linear infinite;">+3</div>
     </div>
     <div class="tip" style="background:rgba(183,53,53,0.07);border:0.5px solid #542026;border-radius:4px;padding:3px 2px;text-align:center;">
-      <div class="tip-left" style="font-size:7px;color:#70484d;text-transform:uppercase;">Харизма<div class="tip-box"><span class="tip-title">✨ Харизма</span>Обман, Убеждение, Запугивание. Полуэльф +1 → 13.<br><span class="tip-good">Полуэльф даёт +1 к Харизме!</span></div></div>
+      <div class="tip-left" style="font-size:7px;color:#70484d;text-transform:uppercase;">Харизма<div class="tip-box"><span class="tip-title">✨ Харизма</span>Обман, Убеждение, Запугивание. Лунный эльф сохраняет природную грацию и социальную уверенность.<br><span class="tip-good">Харизма помогает переговорам, обману и запугиванию.</span></div></div>
       <div style="font-family:Metamorphous,serif;font-size:17px;color:#f4d7d7;line-height:1;">13</div>
       <div style="font-size:10px;color:#ff6b5f;font-weight:bold;">+1</div>
     </div>
@@ -466,7 +599,7 @@ body::after {
       <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+1</span><span style="flex:1;color:#f8e8e8;">Убеждение</span><span style="font-size:7.5px;color:#70484d;">Хар</span></li>
       <li style="display:flex;align-items:center;gap:4px;font-size:9px;"><div class="dot p"></div><span style="font-family:Metamorphous,serif;font-size:9px;color:#ff6b5f;min-width:18px;text-align:right;">+5</span><span style="flex:1;color:#f8e8e8;">Религия</span><span style="font-size:7.5px;color:#70484d;">Инт</span></li>
     </ul>
-    <div style="font-size:6.5px;color:#70484d;margin-top:4px;">Полуэльф: доп. владение Аркана и Религия</div>
+    <div style="font-size:6.5px;color:#70484d;margin-top:4px;">Лунный эльф: Аркана и Религия отражают древнее обучение</div>
   </div>
 
   <!-- БОЙ -->
@@ -540,11 +673,11 @@ body::after {
 <!-- УМЕНИЯ -->
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:8px 10px;border-top:1px solid #542026;">
   <div style="border:1px solid #542026;border-radius:4px;padding:8px;animation:storm-border 5s ease-in-out infinite;">
-    <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #542026;padding-bottom:3px;margin-bottom:5px;">Черты расы: Полуэльф</div>
-    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">+2 Харизма</strong> (→13), +1 к двум другим (Мудрость, Сила)</div>
+    <div style="font-family:Metamorphous,serif;font-size:8px;color:#ff6b5f;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #542026;padding-bottom:3px;margin-bottom:5px;">Черты расы: Лунный эльф</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Эльфийская кровь</strong> — долгоживущая наследница лунных эльфов</div>
     <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Тёмное зрение</strong> — 60 фт</div>
     <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Наследие фей</strong> — преим. против очарования, иммун. к усыплению</div>
-    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Универсальность</strong> — владение двумя доп. навыками: Аркана, Религия</div>
+    <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Лунное обучение</strong> — владение навыками Аркана и Религия</div>
     <div style="font-size:8.5px;color:#f8e8e8;line-height:1.6;">◆ <strong style="color:#f4d7d7;">Языки:</strong> Общий, Эльфийский + ещё один</div>
   </div>
   <div style="border:1px solid #542026;border-radius:4px;padding:8px;animation:thunder-glow 4s ease-in-out infinite;">
@@ -819,32 +952,19 @@ body::after {
 <div id="panel-inventory" class="tab-panel" style="display:none;">
   <div style="background:#16090c;border:1px solid #542026;border-left:3px solid #b73535;border-radius:8px;padding:20px 24px;box-shadow:0 8px 40px rgba(0,0,0,0.4);">
     <div style="font-family:Metamorphous,serif;font-size:16px;color:#f4d7d7;border-bottom:1px solid #542026;padding-bottom:10px;margin-bottom:16px;letter-spacing:2px;">🎒 Инвентарь — Луна</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-      <div style="background:rgba(183,53,53,0.06);border:1px solid #542026;border-radius:6px;padding:14px 16px;">
-        <div style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #542026;padding-bottom:6px;margin-bottom:10px;">⚔ Оружие и доспехи</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(183,53,53,0.1);font-size:13px;color:#f8e8e8;">◆ Булава</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(183,53,53,0.1);font-size:13px;color:#f8e8e8;">◆ Кольчуга (КД 16)</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#f8e8e8;">◆ Щит (+2 КД)</div>
-      </div>
-      <div style="background:rgba(183,53,53,0.06);border:1px solid #542026;border-radius:6px;padding:14px 16px;">
-        <div style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #542026;padding-bottom:6px;margin-bottom:10px;">🔮 Магические и религиозные</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(183,53,53,0.1);font-size:13px;color:#f8e8e8;">◆ Священный символ Актазиона</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#f8e8e8;">◆ Молитвенник</div>
-      </div>
-      <div style="background:rgba(183,53,53,0.06);border:1px solid #542026;border-radius:6px;padding:14px 16px;">
-        <div style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #542026;padding-bottom:6px;margin-bottom:10px;">🎒 Прочее</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(183,53,53,0.1);font-size:13px;color:#f8e8e8;">◆ Рюкзак священника</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(183,53,53,0.1);font-size:13px;color:#f8e8e8;">◆ Факелы × 5</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(183,53,53,0.1);font-size:13px;color:#f8e8e8;">◆ Фляга</div>
-        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#f8e8e8;">◆ Пайки × 5</div>
-      </div>
-      <div style="background:rgba(183,53,53,0.06);border:1px solid #542026;border-radius:6px;padding:14px 16px;">
-        <div style="font-family:Metamorphous,serif;font-size:10px;color:#ff6b5f;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #542026;padding-bottom:6px;margin-bottom:10px;">📝 Заметки</div>
-        <textarea placeholder="Записывай сюда квесты, NPC, долги..." style="height:100px;font-size:13px;padding:10px;"></textarea>
-      </div>
+    <div class="inventory-toolbar">
+      <input class="inventory-password" id="inventory-password" type="password" autocomplete="current-password" placeholder="Пароль синхронизации">
+      <button class="inventory-button" type="button" onclick="addInventoryItem('misc')">+ Предмет</button>
+      <button class="inventory-button" type="button" onclick="saveInventory()">Сохранить</button>
+      <button class="inventory-button" type="button" onclick="loadInventory(true)">Синхронизировать</button>
     </div>
-    <div style="margin-top:16px;padding:12px 16px;background:rgba(183,53,53,0.08);border:1px solid #542026;border-radius:6px;text-align:center;">
-      <strong style="background:linear-gradient(90deg,#7e241f,#ff4f45,#ff9a8d,#ff4f45,#7e241f);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:goldshine 2s linear infinite;font-size:18px;">💰 15 зм · 0 см</strong>
+    <div class="inventory-grid" id="inventory-grid"></div>
+    <div class="inventory-currency-row">
+      <span style="color:#ff6b5f;font-size:12px;">Золото</span>
+      <input class="inventory-currency" id="inventory-gold" type="number" min="0" step="1" inputmode="numeric" value="15">
+      <span style="color:#ff6b5f;font-size:12px;">Серебро</span>
+      <input class="inventory-currency" id="inventory-silver" type="number" min="0" step="1" inputmode="numeric" value="0">
+      <div class="inventory-status" id="inventory-status"></div>
     </div>
   </div>
 </div><!-- END panel-inventory -->
@@ -946,6 +1066,248 @@ function setPortraitImage(src) {
   document.getElementById('portrait-img').style.display = 'block';
   document.getElementById('upload-zone').style.display = 'none';
 }
+
+const INVENTORY_DRAFT_KEY = 'luna_inventory_draft';
+let inventoryState = defaultInventory();
+let inventorySaveTimer = null;
+
+function defaultInventory() {
+  return {
+    version: 1,
+    currency: { gold: 15, silver: 0 },
+    categories: [
+      { id: 'arms', title: 'Оружие и доспехи', items: [
+        { id: 'mace', name: 'Булава', quantity: 1 },
+        { id: 'chain-mail', name: 'Кольчуга (КД 16)', quantity: 1 },
+        { id: 'shield', name: 'Щит (+2 КД)', quantity: 1 },
+      ] },
+      { id: 'magic', title: 'Магические и религиозные', items: [
+        { id: 'holy-symbol', name: 'Священный символ Актазиона', quantity: 1 },
+        { id: 'prayer-book', name: 'Молитвенник', quantity: 1 },
+      ] },
+      { id: 'misc', title: 'Прочее', items: [
+        { id: 'priest-pack', name: 'Рюкзак священника', quantity: 1 },
+        { id: 'torch', name: 'Факелы', quantity: 5 },
+        { id: 'waterskin', name: 'Фляга', quantity: 1 },
+        { id: 'rations', name: 'Пайки', quantity: 5 },
+      ] },
+    ],
+  };
+}
+
+function normalizeInventory(value) {
+  const base = defaultInventory();
+  if (!value || value.version !== 1 || !Array.isArray(value.categories)) return base;
+  const categoryMap = new Map(base.categories.map(category => [category.id, category]));
+  const categories = base.categories.map(category => {
+    const source = value.categories.find(item => item.id === category.id) || category;
+    return {
+      id: category.id,
+      title: category.title,
+      items: Array.isArray(source.items) ? source.items.map(normalizeInventoryItem).filter(Boolean) : category.items,
+    };
+  });
+  value.categories.forEach(category => {
+    if (!categoryMap.has(category.id) && typeof category.title === 'string' && Array.isArray(category.items)) {
+      categories.push({
+        id: String(category.id).slice(0, 40),
+        title: category.title.slice(0, 80),
+        items: category.items.map(normalizeInventoryItem).filter(Boolean),
+      });
+    }
+  });
+  return {
+    version: 1,
+    currency: {
+      gold: Math.max(0, Number(value.currency?.gold) || 0),
+      silver: Math.max(0, Number(value.currency?.silver) || 0),
+    },
+    categories,
+  };
+}
+
+function normalizeInventoryItem(item) {
+  if (!item || typeof item.name !== 'string') return null;
+  const name = item.name.trim().slice(0, 120);
+  if (!name) return null;
+  return {
+    id: typeof item.id === 'string' ? item.id.slice(0, 60) : createInventoryId(),
+    name,
+    quantity: Math.max(0, Math.min(99999, Math.round(Number(item.quantity) || 0))),
+  };
+}
+
+function createInventoryId() {
+  return 'item-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 8);
+}
+
+function setInventoryStatus(message, state = '') {
+  const status = document.getElementById('inventory-status');
+  if (!status) return;
+  status.textContent = message;
+  status.className = 'inventory-status ' + state;
+}
+
+function renderInventory() {
+  const grid = document.getElementById('inventory-grid');
+  const gold = document.getElementById('inventory-gold');
+  const silver = document.getElementById('inventory-silver');
+  if (!grid || !gold || !silver) return;
+  gold.value = inventoryState.currency.gold;
+  silver.value = inventoryState.currency.silver;
+  grid.innerHTML = inventoryState.categories.map(category => `
+    <div class="inventory-card">
+      <div class="inventory-card-title">
+        <span>${escapeHtml(category.title)}</span>
+        <button class="inventory-button" type="button" onclick="addInventoryItem('${category.id}')">+</button>
+      </div>
+      <div class="inventory-items">
+        ${category.items.map(item => `
+          <div class="inventory-row">
+            <input class="inventory-input" value="${escapeAttribute(item.name)}" aria-label="Название предмета" oninput="updateInventoryItem('${category.id}','${item.id}','name',this.value)">
+            <input class="inventory-input inventory-qty" type="number" min="0" step="1" inputmode="numeric" value="${item.quantity}" aria-label="Количество" oninput="updateInventoryItem('${category.id}','${item.id}','quantity',this.value)">
+            <button class="inventory-remove" type="button" aria-label="Удалить предмет" onclick="removeInventoryItem('${category.id}','${item.id}')">×</button>
+          </div>
+        `).join('') || '<div style="font-size:11px;color:#70484d;">Пока пусто</div>'}
+      </div>
+    </div>
+  `).join('');
+}
+
+function updateInventoryItem(categoryId, itemId, field, value) {
+  const item = findInventoryItem(categoryId, itemId);
+  if (!item) return;
+  if (field === 'quantity') {
+    item.quantity = Math.max(0, Math.min(99999, Math.round(Number(value) || 0)));
+  } else {
+    item.name = String(value).slice(0, 120);
+  }
+  markInventoryDirty();
+}
+
+function findInventoryItem(categoryId, itemId) {
+  return inventoryState.categories.find(category => category.id === categoryId)?.items.find(item => item.id === itemId);
+}
+
+function addInventoryItem(categoryId) {
+  const category = inventoryState.categories.find(item => item.id === categoryId) || inventoryState.categories[2];
+  category.items.push({ id: createInventoryId(), name: 'Новый предмет', quantity: 1 });
+  renderInventory();
+  markInventoryDirty();
+}
+
+function removeInventoryItem(categoryId, itemId) {
+  const category = inventoryState.categories.find(item => item.id === categoryId);
+  if (!category) return;
+  category.items = category.items.filter(item => item.id !== itemId);
+  renderInventory();
+  markInventoryDirty();
+}
+
+function syncInventoryCurrency() {
+  inventoryState.currency.gold = Math.max(0, Math.round(Number(document.getElementById('inventory-gold')?.value) || 0));
+  inventoryState.currency.silver = Math.max(0, Math.round(Number(document.getElementById('inventory-silver')?.value) || 0));
+}
+
+function markInventoryDirty() {
+  syncInventoryCurrency();
+  localStorage.setItem(INVENTORY_DRAFT_KEY, JSON.stringify(inventoryState));
+  setInventoryStatus('Есть несохранённые изменения', 'saving');
+  scheduleInventorySave();
+}
+
+function readInventoryDraft() {
+  try {
+    const draft = localStorage.getItem(INVENTORY_DRAFT_KEY);
+    return draft ? JSON.parse(draft) : null;
+  } catch(e) {
+    localStorage.removeItem(INVENTORY_DRAFT_KEY);
+    return null;
+  }
+}
+
+function scheduleInventorySave() {
+  clearTimeout(inventorySaveTimer);
+  const password = document.getElementById('inventory-password')?.value;
+  if (!password) return;
+  inventorySaveTimer = setTimeout(saveInventory, 900);
+}
+
+async function loadInventory(manual = false) {
+  const password = document.getElementById('inventory-password');
+  const savedToken = localStorage.getItem('luna_upload_token');
+  if (password && savedToken && !password.value) password.value = savedToken;
+  const localDraft = readInventoryDraft();
+  if (manual) setInventoryStatus('Синхронизирую инвентарь...');
+  try {
+    const response = await fetch('/.netlify/functions/get-inventory', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Не удалось загрузить инвентарь');
+    const result = await response.json();
+    inventoryState = normalizeInventory(localDraft || result.data);
+    renderInventory();
+    setInventoryStatus(result.updatedAt ? 'Инвентарь загружен из облака' : 'Инвентарь готов', 'saved');
+  } catch(error) {
+    inventoryState = normalizeInventory(localDraft);
+    renderInventory();
+    setInventoryStatus(localDraft ? 'Открыт локальный черновик' : 'Инвентарь готов локально', localDraft ? 'error' : '');
+  }
+}
+
+async function saveInventory() {
+  const passwordInput = document.getElementById('inventory-password');
+  const password = passwordInput?.value || localStorage.getItem('luna_upload_token') || '';
+  syncInventoryCurrency();
+  if (!password) {
+    setInventoryStatus('Введи пароль синхронизации', 'error');
+    passwordInput?.focus();
+    return;
+  }
+  clearTimeout(inventorySaveTimer);
+  setInventoryStatus('Сохраняю инвентарь...');
+  try {
+    const response = await fetch('/.netlify/functions/save-inventory', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'x-upload-token': password,
+      },
+      body: JSON.stringify(inventoryState),
+    });
+    let result = {};
+    try { result = await response.json(); } catch(e) {}
+    if (!response.ok) {
+      if (response.status === 401) localStorage.removeItem('luna_upload_token');
+      throw new Error(result.error || 'Не удалось сохранить инвентарь');
+    }
+    localStorage.setItem('luna_upload_token', password);
+    localStorage.removeItem(INVENTORY_DRAFT_KEY);
+    setInventoryStatus('Инвентарь сохранён в облаке', 'saved');
+  } catch(error) {
+    localStorage.setItem(INVENTORY_DRAFT_KEY, JSON.stringify(inventoryState));
+    setInventoryStatus(error.message || 'Ошибка сохранения', 'error');
+  }
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[char]));
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value).replace(/`/g, '&#96;');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  loadInventory();
+  document.getElementById('inventory-gold')?.addEventListener('input', markInventoryDirty);
+  document.getElementById('inventory-silver')?.addEventListener('input', markInventoryDirty);
+  document.getElementById('inventory-password')?.addEventListener('input', scheduleInventorySave);
+});
 
 // Ripple
 document.querySelectorAll('.scard-anim').forEach(card => {
